@@ -28,22 +28,24 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-32 bg-[#f4f4f0]">
-      <div className="max-w-6xl mx-auto w-full px-8 md:px-16 lg:px-24">
+    <section id="services" className="py-32 bg-[#f7f7f5] border-t border-[#e8e8e6]">
+      <div className="max-w-7xl mx-auto w-full px-8 md:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20"
         >
-          <p className="text-sm uppercase tracking-widest text-[#6b6b6b] mb-4">Services</p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#111110]">
-            What we do
+          <h2 className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-none tracking-tight text-[#0a0a0a] uppercase">
+            What we<br />do
           </h2>
+          <p className="text-[#6b6b6b] max-w-sm font-light leading-relaxed">
+            Three core disciplines. One studio. Complete ownership of your project from first commit to final deploy.
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-0 border-t border-[#e5e5e3]">
+        <div className="grid md:grid-cols-3 gap-px bg-[#e8e8e6]">
           {services.map((service, i) => (
             <motion.div
               key={service.number}
@@ -51,17 +53,14 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="pt-10 pb-10 md:pr-10 md:last:pr-0 border-b md:border-b-0 md:border-r border-[#e5e5e3] last:border-r-0"
+              className="bg-[#f7f7f5] p-10 flex flex-col gap-6"
             >
-              <p className="text-sm text-[#6b6b6b] mb-4">{service.number}</p>
-              <h3 className="text-xl font-bold text-[#111110] mb-4">{service.title}</h3>
-              <p className="text-[#6b6b6b] leading-relaxed mb-6">{service.description}</p>
-              <div className="flex flex-wrap gap-2">
+              <span className="text-[#0047FF] text-sm font-bold tracking-widest uppercase">{service.number}</span>
+              <h3 className="text-2xl font-black tracking-tight text-[#0a0a0a] uppercase">{service.title}</h3>
+              <p className="text-[#6b6b6b] leading-relaxed font-light flex-1">{service.description}</p>
+              <div className="flex flex-wrap gap-2 pt-4 border-t border-[#e8e8e6]">
                 {service.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs px-3 py-1 border border-[#e5e5e3] text-[#6b6b6b]"
-                  >
+                  <span key={tag} className="text-xs px-3 py-1 bg-white border border-[#e8e8e6] text-[#6b6b6b] font-medium">
                     {tag}
                   </span>
                 ))}

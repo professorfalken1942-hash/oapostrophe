@@ -34,23 +34,22 @@ export default function Contact() {
   };
 
   const inputClass =
-    "w-full bg-transparent border border-[#e5e5e3] px-4 py-3 text-sm text-[#111110] placeholder-[#aaa] focus:outline-none focus:border-[#111110] transition-colors";
+    "w-full bg-white border border-[#e8e8e6] px-5 py-4 text-sm text-[#0a0a0a] placeholder-[#aaa] focus:outline-none focus:border-[#0047FF] transition-colors font-medium";
 
   return (
-    <section id="contact" className="py-32 bg-[#fafaf8] border-t border-[#e5e5e3]">
-      <div className="max-w-6xl mx-auto w-full px-8 md:px-16 lg:px-24">
-        <div className="grid md:grid-cols-2 gap-24">
+    <section id="contact" className="py-32 bg-[#f7f7f5] border-t border-[#e8e8e6]">
+      <div className="max-w-7xl mx-auto w-full px-8 md:px-16">
+        <div className="grid md:grid-cols-2 gap-24 items-start">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-sm uppercase tracking-widest text-[#6b6b6b] mb-4">Contact</p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#111110] mb-6">
+            <h2 className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-none tracking-tight text-[#0a0a0a] uppercase mb-8">
               Start a<br />project.
             </h2>
-            <p className="text-[#6b6b6b] leading-relaxed max-w-sm">
+            <p className="text-[#6b6b6b] leading-relaxed font-light max-w-sm">
               Tell us what you&apos;re building. We&apos;ll get back to you within one business day 
               with thoughts, questions, and next steps.
             </p>
@@ -62,7 +61,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-4"
+            className="flex flex-col gap-4"
           >
             <div className="grid grid-cols-2 gap-4">
               <input
@@ -116,15 +115,15 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="w-full px-8 py-4 bg-[#111110] text-[#fafaf8] text-sm uppercase tracking-widest hover:bg-[#333] transition-colors disabled:opacity-50"
+              className="w-full px-8 py-5 bg-[#0047FF] text-white text-sm font-bold uppercase tracking-widest hover:bg-[#0035cc] transition-colors disabled:opacity-50"
             >
               {status === "loading" ? "Sending..." : "Send message"}
             </button>
             {status === "success" && (
-              <p className="text-sm text-green-600">Got it — we&apos;ll be in touch soon.</p>
+              <p className="text-sm font-medium text-green-600">Got it — we&apos;ll be in touch soon.</p>
             )}
             {status === "error" && (
-              <p className="text-sm text-red-500">Something went wrong. Try again or email us directly.</p>
+              <p className="text-sm font-medium text-red-500">Something went wrong. Try again or email us directly.</p>
             )}
           </motion.form>
         </div>

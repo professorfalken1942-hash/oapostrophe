@@ -4,35 +4,39 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center py-32">
-      <div className="max-w-6xl mx-auto w-full px-8 md:px-16 lg:px-24">
+    <section className="min-h-screen flex flex-col justify-end pb-20 pt-32 bg-white">
+      <div className="max-w-7xl mx-auto w-full px-8 md:px-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="text-sm uppercase tracking-widest text-[#6b6b6b] mb-8">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#6b6b6b] mb-12">
             oapostrophe — Digital Studio
           </p>
-          <h1 className="text-6xl md:text-8xl font-bold leading-none tracking-tight text-[#111110] mb-8">
+
+          <h1 className="text-[clamp(3.5rem,10vw,9rem)] font-black leading-[0.9] tracking-tight text-[#0a0a0a] uppercase mb-12">
             Built for<br />
             your goals.<br />
-            <span className="text-[#6b6b6b]">Not ours.</span>
+            <span className="text-[#0047FF]">Not ours.</span>
           </h1>
-          <p className="text-lg md:text-xl text-[#6b6b6b] max-w-xl mt-8 leading-relaxed">
-            Boutique web development, full-stack engineering, and strategic consulting — 
-            AI-assisted, fast turnaround, with the kind of attention a big agency can&apos;t afford to give you.
-          </p>
-          <div className="flex items-center gap-6 mt-12">
-            <a
-              href="#contact"
-              className="px-8 py-4 bg-[#111110] text-[#fafaf8] text-sm uppercase tracking-widest hover:bg-[#333] transition-colors"
-            >
-              Start a project
-            </a>
-            <a href="#services" className="text-sm text-[#6b6b6b] underline underline-offset-4 hover:text-[#111110] transition-colors">
-              See what we do
-            </a>
+
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 border-t border-[#e8e8e6] pt-10">
+            <p className="text-lg md:text-xl text-[#6b6b6b] max-w-lg leading-relaxed font-light">
+              Boutique web development, full-stack engineering, and strategic consulting — 
+              AI-assisted, fast turnaround, with the kind of attention a big agency can&apos;t afford to give you.
+            </p>
+            <div className="flex items-center gap-6 shrink-0">
+              <a
+                href="#contact"
+                className="px-8 py-4 bg-[#0047FF] text-white text-sm font-semibold uppercase tracking-widest hover:bg-[#0035cc] transition-colors"
+              >
+                Start a project
+              </a>
+              <a href="#services" className="text-sm font-medium text-[#0a0a0a] underline underline-offset-4 hover:text-[#0047FF] transition-colors">
+                See what we do
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

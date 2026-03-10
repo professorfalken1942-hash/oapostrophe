@@ -27,22 +27,21 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-32 bg-[#111110]">
-      <div className="max-w-6xl mx-auto w-full px-8 md:px-16 lg:px-24">
+    <section id="process" className="py-32 bg-[#0047FF] border-t border-[#0035cc]">
+      <div className="max-w-7xl mx-auto w-full px-8 md:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-20"
         >
-          <p className="text-sm uppercase tracking-widest text-[#6b6b6b] mb-4">Process</p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#fafaf8]">
-            How it works
+          <h2 className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-none tracking-tight text-white uppercase">
+            How it<br />works
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-4 gap-0 border-t border-[#333]">
+        <div className="grid md:grid-cols-4 gap-px bg-[#0035cc]">
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
@@ -50,11 +49,11 @@ export default function Process() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="pt-10 pb-10 md:pr-8 md:last:pr-0 border-b md:border-b-0 md:border-r border-[#333] last:border-r-0"
+              className="bg-[#0047FF] p-10 flex flex-col gap-6"
             >
-              <p className="text-sm text-[#6b6b6b] mb-4">{step.number}</p>
-              <h3 className="text-lg font-bold text-[#fafaf8] mb-4">{step.title}</h3>
-              <p className="text-[#6b6b6b] leading-relaxed text-sm">{step.description}</p>
+              <span className="text-white/40 text-sm font-bold tracking-widest uppercase">{step.number}</span>
+              <h3 className="text-xl font-black text-white uppercase tracking-tight">{step.title}</h3>
+              <p className="text-white/70 leading-relaxed font-light text-sm">{step.description}</p>
             </motion.div>
           ))}
         </div>
