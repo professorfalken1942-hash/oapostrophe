@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="px-8 py-24 max-w-6xl mx-auto">
-      <div className="grid md:grid-cols-2 gap-16 items-start">
+    <section id="about" className="px-12 py-32 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-24 items-start">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

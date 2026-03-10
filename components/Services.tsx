@@ -28,7 +28,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="px-8 py-24 max-w-6xl mx-auto">
+    <section id="services" className="px-12 py-32 max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.1 }}
-            className="py-10 pr-8 border-b md:border-b-0 md:border-r border-[#e5e5e3] last:border-r-0"
+            className="py-14 pr-12 border-b md:border-b-0 md:border-r border-[#e5e5e3] last:border-r-0 first:pl-0 pl-12"
           >
             <p className="text-sm text-[#6b6b6b] mb-4">{service.number}</p>
             <h3 className="text-xl font-bold text-[#111110] mb-4">{service.title}</h3>

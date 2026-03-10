@@ -37,8 +37,8 @@ export default function Contact() {
     "w-full bg-transparent border border-[#e5e5e3] px-4 py-3 text-sm text-[#111110] placeholder-[#aaa] focus:outline-none focus:border-[#111110] transition-colors";
 
   return (
-    <section id="contact" className="px-8 py-24 bg-[#fafaf8] border-t border-[#e5e5e3]">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+    <section id="contact" className="px-12 py-32 bg-[#fafaf8] border-t border-[#e5e5e3]">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -8,7 +8,7 @@ export default function Nav() {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 bg-[#fafaf8]/90 backdrop-blur-sm border-b border-[#e5e5e3]"
+      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-12 py-7 bg-[#fafaf8]/90 backdrop-blur-sm border-b border-[#e5e5e3]"
     >
       <a href="#" className="text-xl font-bold tracking-tight text-[#111110]">
         o&apos;
