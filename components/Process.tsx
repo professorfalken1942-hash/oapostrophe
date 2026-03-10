@@ -27,16 +27,17 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="px-12 py-32 bg-[#111110]">
-      <div className="max-w-6xl mx-auto">
+    <section id="process" className="py-32 bg-[#111110]">
+      <div className="max-w-6xl mx-auto w-full px-8 md:px-16 lg:px-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="mb-16"
         >
           <p className="text-sm uppercase tracking-widest text-[#6b6b6b] mb-4">Process</p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#fafaf8] mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#fafaf8]">
             How it works
           </h2>
         </motion.div>
@@ -49,7 +50,7 @@ export default function Process() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="py-14 pr-10 border-b md:border-b-0 md:border-r border-[#333] last:border-r-0 first:pl-0 pl-10"
+              className="pt-10 pb-10 md:pr-8 md:last:pr-0 border-b md:border-b-0 md:border-r border-[#333] last:border-r-0"
             >
               <p className="text-sm text-[#6b6b6b] mb-4">{step.number}</p>
               <h3 className="text-lg font-bold text-[#fafaf8] mb-4">{step.title}</h3>

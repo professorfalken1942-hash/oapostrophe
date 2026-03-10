@@ -28,44 +28,47 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="px-12 py-32 max-w-6xl mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <p className="text-sm uppercase tracking-widest text-[#6b6b6b] mb-4">Services</p>
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#111110] mb-16">
-          What we do
-        </h2>
-      </motion.div>
+    <section id="services" className="py-32">
+      <div className="max-w-6xl mx-auto w-full px-8 md:px-16 lg:px-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-16"
+        >
+          <p className="text-sm uppercase tracking-widest text-[#6b6b6b] mb-4">Services</p>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#111110]">
+            What we do
+          </h2>
+        </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-0 border-t border-[#e5e5e3]">
-        {services.map((service, i) => (
-          <motion.div
-            key={service.number}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
-            className="py-14 pr-12 border-b md:border-b-0 md:border-r border-[#e5e5e3] last:border-r-0 first:pl-0 pl-12"
-          >
-            <p className="text-sm text-[#6b6b6b] mb-4">{service.number}</p>
-            <h3 className="text-xl font-bold text-[#111110] mb-4">{service.title}</h3>
-            <p className="text-[#6b6b6b] leading-relaxed mb-6">{service.description}</p>
-            <div className="flex flex-wrap gap-2">
-              {service.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-xs px-3 py-1 border border-[#e5e5e3] text-[#6b6b6b]"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        ))}
+        <div className="grid md:grid-cols-3 gap-0 border-t border-[#e5e5e3]">
+          {services.map((service, i) => (
+            <motion.div
+              key={service.number}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="pt-10 pb-10 md:pr-10 md:last:pr-0 border-b md:border-b-0 md:border-r border-[#e5e5e3] last:border-r-0"
+            >
+              <p className="text-sm text-[#6b6b6b] mb-4">{service.number}</p>
+              <h3 className="text-xl font-bold text-[#111110] mb-4">{service.title}</h3>
+              <p className="text-[#6b6b6b] leading-relaxed mb-6">{service.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {service.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs px-3 py-1 border border-[#e5e5e3] text-[#6b6b6b]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
