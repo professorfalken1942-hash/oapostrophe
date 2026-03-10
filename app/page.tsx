@@ -11,11 +11,14 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex flex-col">
       <Nav />
       <Hero />
+      <div className="border-t border-[#e5e5e3]" />
       <Services />
+      <div className="border-t border-[#e5e5e3]" />
       <Process />
+      <div className="border-t border-[#333]" />
       <About />
       <Contact />
       <Footer />
