@@ -5,24 +5,22 @@ import { motion } from "framer-motion";
 export default function Nav() {
   return (
     <motion.nav
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#e8e8e6]"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="fixed top-0 left-0 right-0 z-50 bg-white/96 backdrop-blur-sm"
     >
-      {/* height: 64px = 8×8pt */}
-      <div className="max-w-7xl mx-auto px-8 md:px-16 h-16 flex items-center justify-between">
-        <a href="#" className="text-lg font-black tracking-tight text-[#0a0a0a] uppercase leading-[16px]">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 h-16 flex items-center justify-between border-b border-[#e8e8e4]">
+        <a href="#" className="serif text-xl italic text-[#111111]">
           o&apos;
         </a>
-        <div className="flex items-center gap-8 label-text text-[#6b6b6b]">
-          <a href="#services" className="hover:text-[#0a0a0a] transition-colors">Services</a>
-          <a href="#process" className="hover:text-[#0a0a0a] transition-colors">Process</a>
-          <a href="#about" className="hover:text-[#0a0a0a] transition-colors">About</a>
-          {/* button: 40px tall = 5×8pt, px-6=24px */}
+        <div className="flex items-center gap-10 label-text text-[#888884]">
+          <a href="#services" className="hover:text-[#111111] transition-colors">Services</a>
+          <a href="#process" className="hover:text-[#111111] transition-colors">Process</a>
+          <a href="#about" className="hover:text-[#111111] transition-colors">About</a>
           <a
             href="#contact"
-            className="h-10 px-6 flex items-center bg-[#0047FF] text-white label-text hover:bg-[#0035cc] transition-colors"
+            className="h-9 px-6 flex items-center border border-[#111111] text-[#111111] label-text hover:bg-[#111111] hover:text-white transition-colors"
           >
             Start a project
           </a>

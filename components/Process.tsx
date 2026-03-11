@@ -27,40 +27,34 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-24 bg-[#0047FF] border-t border-[#0035cc]">
+    <section id="process" className="py-32 bg-[#f9f9f7] border-t border-[#e8e8e4]">
       <div className="max-w-7xl mx-auto w-full px-8 md:px-16">
 
-        {/* header: mb-16=64px */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
+          transition={{ duration: 0.7 }}
+          className="mb-24"
         >
-          <h2 className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-[0.9] tracking-tight text-white uppercase">
-            How it<br />works
+          <h2 className="serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] text-[#111111]">
+            How it works
           </h2>
         </motion.div>
 
-        {/* cards: p-8=32px */}
-        <div className="grid md:grid-cols-4 gap-px bg-[#0035cc]">
+        <div className="flex flex-col divide-y divide-[#e8e8e4]">
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-[#0047FF] p-8 flex flex-col gap-4"
+              transition={{ duration: 0.6, delay: i * 0.08 }}
+              className="grid md:grid-cols-4 gap-8 py-10 items-start"
             >
-              <span className="label-text text-white/40">{step.number}</span>
-              <h3 className="text-lg font-black text-white uppercase tracking-tight leading-[24px]">
-                {step.title}
-              </h3>
-              <p className="body-copy text-white/70 font-light text-sm" style={{ lineHeight: '20px' }}>
-                {step.description}
-              </p>
+              <span className="label-text text-[#0047FF]">{step.number}</span>
+              <h3 className="serif text-2xl text-[#111111]">{step.title}</h3>
+              <p className="text-sm text-[#888884] leading-relaxed md:col-span-2">{step.description}</p>
             </motion.div>
           ))}
         </div>
