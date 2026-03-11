@@ -30,3 +30,9 @@ body {
   background: #0047FF;
   color: #ffffff;
 }
+
+.body-copy {
+  max-width: 540px;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}

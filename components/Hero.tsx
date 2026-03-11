@@ -22,7 +22,7 @@ export default function Hero() {
           </h1>
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 border-t border-[#e8e8e6] pt-10">
-            <p className="text-lg md:text-xl text-[#6b6b6b] max-w-lg leading-relaxed font-light">
+            <p className="body-copy text-lg md:text-xl text-[#6b6b6b] font-light">
               Boutique web development, full-stack engineering, and strategic consulting — 
               AI-assisted, fast turnaround, with the kind of attention a big agency can&apos;t afford to give you.
             </p>

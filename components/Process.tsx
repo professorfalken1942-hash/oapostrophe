@@ -53,7 +53,7 @@ export default function Process() {
             >
               <span className="text-white/40 text-sm font-bold tracking-widest uppercase">{step.number}</span>
               <h3 className="text-xl font-black text-white uppercase tracking-tight">{step.title}</h3>
-              <p className="text-white/70 leading-relaxed font-light text-sm">{step.description}</p>
+              <p className="body-copy text-white/70 font-light text-sm">{step.description}</p>
             </motion.div>
           ))}
         </div>

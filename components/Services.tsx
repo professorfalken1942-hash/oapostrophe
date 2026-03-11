@@ -40,7 +40,7 @@ export default function Services() {
           <h2 className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-none tracking-tight text-[#0a0a0a] uppercase">
             What we<br />do
           </h2>
-          <p className="text-[#6b6b6b] max-w-sm font-light leading-relaxed">
+          <p className="body-copy text-[#6b6b6b] font-light">
             Three core disciplines. One studio. Complete ownership of your project from first commit to final deploy.
           </p>
         </motion.div>
@@ -57,7 +57,7 @@ export default function Services() {
             >
               <span className="text-[#0047FF] text-sm font-bold tracking-widest uppercase">{service.number}</span>
               <h3 className="text-2xl font-black tracking-tight text-[#0a0a0a] uppercase">{service.title}</h3>
-              <p className="text-[#6b6b6b] leading-relaxed font-light flex-1">{service.description}</p>
+              <p className="body-copy text-[#6b6b6b] font-light flex-1">{service.description}</p>
               <div className="flex flex-wrap gap-2 pt-4 border-t border-[#e8e8e6]">
                 {service.tags.map((tag) => (
                   <span key={tag} className="text-xs px-3 py-1 bg-white border border-[#e8e8e6] text-[#6b6b6b] font-medium">

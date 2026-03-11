@@ -24,19 +24,19 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col gap-6 pt-4"
+            className="flex flex-col gap-6 pt-4 body-copy"
           >
-            <p className="text-lg text-[#6b6b6b] leading-relaxed font-light">
+            <p className="text-lg text-[#6b6b6b] font-light">
               oapostrophe is a solo studio — which means you get a senior engineer who&apos;s 
               personally invested in your project, not a rotating cast of junior developers 
               managed by someone who never looks at the code.
             </p>
-            <p className="text-lg text-[#6b6b6b] leading-relaxed font-light">
+            <p className="text-lg text-[#6b6b6b] font-light">
               AI-assisted workflows let us move at a pace that used to require a full team. 
               The result: agency-quality output, boutique-level attention, at a price that 
               makes sense for businesses that aren&apos;t burning VC money.
             </p>
-            <p className="text-lg text-[#6b6b6b] leading-relaxed font-light">
+            <p className="text-lg text-[#6b6b6b] font-light">
               We work with small businesses, founders, and anyone who needs something built 
               right and built fast — without the overhead.
             </p>

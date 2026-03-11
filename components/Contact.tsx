@@ -49,7 +49,7 @@ export default function Contact() {
             <h2 className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-none tracking-tight text-[#0a0a0a] uppercase mb-8">
               Start a<br />project.
             </h2>
-            <p className="text-[#6b6b6b] leading-relaxed font-light max-w-sm">
+            <p className="body-copy text-[#6b6b6b] font-light">
               Tell us what you&apos;re building. We&apos;ll get back to you within one business day 
               with thoughts, questions, and next steps.
             </p>
