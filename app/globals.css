@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/*
+  Grid System
+  -----------
+  8pt grid  → layout spacing: 8, 16, 24, 32, 40, 48, 64, 80, 96, 128, 160, 192px
+              Tailwind units: 2,  4,  6,  8,  10, 12, 16, 20, 24, 32,  40,  48
+  4pt baseline → line-heights, small UI padding: multiples of 4px
+*/
+
 :root {
   --blue: #0047FF;
   --black: #0a0a0a;
@@ -7,6 +15,27 @@
   --off-white: #f7f7f5;
   --gray: #6b6b6b;
   --light-gray: #e8e8e6;
+
+  /* 8pt spacing tokens */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-16: 128px;
+  --space-20: 160px;
+  --space-24: 192px;
+
+  /* 4pt baseline tokens */
+  --leading-label: 16px;   /* 14px text → 16px line */
+  --leading-body-sm: 20px; /* 14px text → 20px line */
+  --leading-body: 28px;    /* 18px text → 28px line */
+  --leading-body-lg: 32px; /* 20px text → 32px line */
+  --leading-display: 0.9;  /* large display type */
 }
 
 * {
@@ -31,8 +60,18 @@ body {
   color: #ffffff;
 }
 
+/* Body copy container — 4pt baseline rhythm */
 .body-copy {
   max-width: 540px;
-  line-height: 1.75;
+  line-height: var(--leading-body);   /* 28px = 7 × 4pt */
   letter-spacing: 0.01em;
+}
+
+/* Label / overline text */
+.label-text {
+  font-size: 0.75rem;       /* 12px */
+  line-height: 16px;        /* 4pt baseline */
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  text-transform: uppercase;
 }
