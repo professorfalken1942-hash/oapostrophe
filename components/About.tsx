@@ -25,7 +25,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="body-copy flex flex-col gap-6 text-[#888884]"
+            className="body-copy flex flex-col gap-6 text-[#444440]"
           >
             <p>
               oapostrophe is a solo studio — which means you get a senior engineer who&apos;s 

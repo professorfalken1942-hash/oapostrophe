@@ -39,7 +39,7 @@ export default function Services() {
             What we do
           </h2>
           <div className="flex flex-col justify-end">
-            <div className="body-copy flex flex-col gap-4 text-[#888884]">
+            <div className="body-copy flex flex-col gap-4 text-[#444440]">
               <p>
                 Most agencies hand you off. Strategists to designers to developers to account managers — 
                 each one a little further from your actual problem. By the time it ships, nobody&apos;s 
@@ -70,10 +70,10 @@ export default function Services() {
             >
               <span className="label-text text-[#0047FF]">{service.number}</span>
               <h3 className="serif text-2xl text-[#111111] md:col-span-1">{service.title}</h3>
-              <p className="text-sm text-[#888884] leading-relaxed md:col-span-1">{service.description}</p>
+              <p className="text-base text-[#444440] leading-relaxed md:col-span-1">{service.description}</p>
               <div className="flex flex-wrap gap-2 md:justify-end">
                 {service.tags.map((tag) => (
-                  <span key={tag} className="label-text text-[#888884] border border-[#e8e8e4] px-3 py-1">
+                  <span key={tag} className="label-text text-[#444440] border border-[#e8e8e4] px-3 py-1">
                     {tag}
                   </span>
                 ))}

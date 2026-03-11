@@ -5,7 +5,7 @@
   --black: #111111;
   --white: #ffffff;
   --off-white: #f9f9f7;
-  --gray: #888884;
+  --gray: #444440;
   --light-gray: #e8e8e4;
   --serif: var(--font-serif);
   --sans: var(--font-inter);
@@ -25,7 +25,8 @@ body {
   background: var(--white);
   color: var(--black);
   font-family: var(--font-inter), 'Helvetica Neue', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -39,10 +40,10 @@ body {
 }
 
 .body-copy {
-  max-width: 520px;
-  line-height: 1.8;
-  letter-spacing: 0.01em;
-  font-weight: 300;
+  max-width: 560px;
+  line-height: 1.85;
+  letter-spacing: 0.012em;
+  font-weight: 400;
 }
 
 .label-text {

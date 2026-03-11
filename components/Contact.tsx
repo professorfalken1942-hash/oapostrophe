@@ -45,7 +45,7 @@ export default function Contact() {
             <h2 className="serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] text-[#111111] mb-8">
               Start a project.
             </h2>
-            <p className="body-copy text-[#888884]">
+            <p className="body-copy text-[#444440]">
               Tell us what you&apos;re building. We&apos;ll get back to you within one business day 
               with thoughts, questions, and next steps.
             </p>

@@ -54,7 +54,7 @@ export default function Process() {
             >
               <span className="label-text text-[#0047FF]">{step.number}</span>
               <h3 className="serif text-2xl text-[#111111]">{step.title}</h3>
-              <p className="text-sm text-[#888884] leading-relaxed md:col-span-2">{step.description}</p>
+              <p className="text-base text-[#444440] leading-relaxed md:col-span-2">{step.description}</p>
             </motion.div>
           ))}
         </div>

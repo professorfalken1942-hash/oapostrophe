@@ -14,7 +14,7 @@ export default function Nav() {
         <a href="#" className="serif text-xl italic text-[#111111]">
           o&apos;
         </a>
-        <div className="flex items-center gap-10 label-text text-[#888884]">
+        <div className="flex items-center gap-10 label-text text-[#444440]">
           <a href="#services" className="hover:text-[#111111] transition-colors">Services</a>
           <a href="#process" className="hover:text-[#111111] transition-colors">Process</a>
           <a href="#about" className="hover:text-[#111111] transition-colors">About</a>
