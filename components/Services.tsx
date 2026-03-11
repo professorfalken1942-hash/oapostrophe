@@ -40,11 +40,22 @@ export default function Services() {
           <h2 className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-[0.9] tracking-tight text-[#0a0a0a] uppercase">
             What we<br />do
           </h2>
-          <p className="body-copy text-[#6b6b6b] font-light" style={{ lineHeight: '28px' }}>
-            Most agencies hand you off. Strategists to designers to developers to account managers — 
-            each one a little further from your actual problem. We don&apos;t work that way. 
-            One person owns the whole thing, start to finish, and that person cares whether it works.
-          </p>
+          <div className="body-copy flex flex-col gap-4 text-[#6b6b6b] font-light" style={{ lineHeight: '28px' }}>
+            <p>
+              Most agencies hand you off. Strategists to designers to developers to account managers — 
+              each one a little further from your actual problem. By the time it ships, nobody&apos;s 
+              sure who made what decision or why.
+            </p>
+            <p>
+              We work differently. One senior engineer owns the entire engagement — the strategy, 
+              the architecture, the code, the deployment. No handoffs. No translation loss. 
+              No junior developers quietly doing the work while a director takes the credit.
+            </p>
+            <p>
+              The result is faster, tighter, and built by someone who will still be accountable 
+              after the invoice clears.
+            </p>
+          </div>
         </motion.div>
 
         {/* cards: gap-px grid, each card p-8=32px = 4×8pt */}
