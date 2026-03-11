@@ -53,3 +53,7 @@ body {
   font-weight: 400;
   text-transform: uppercase;
 }
+
+section{
+  margin: 32px;
+}
