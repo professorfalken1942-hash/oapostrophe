@@ -55,7 +55,7 @@ body {
 }
 
 section{
-  margin: 32px;
-  padding-left:32px;
-  padding-right:32px;
+  margin: 32px !important;
+  padding-left:32px !important;
+  padding-right:32px !important;
 }
