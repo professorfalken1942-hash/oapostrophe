@@ -18,6 +18,7 @@ export default function Nav() {
           <a href="#services" className="hover:text-[#111111] transition-colors">Services</a>
           <a href="#process" className="hover:text-[#111111] transition-colors">Process</a>
           <a href="#about" className="hover:text-[#111111] transition-colors">About</a>
+          <a href="/journal" className="hover:text-[#111111] transition-colors">Journal</a>
           <a
             href="#contact"
             className="h-9 px-6 flex items-center border border-[#111111] text-[#111111] label-text hover:bg-[#111111] hover:text-white transition-colors"
