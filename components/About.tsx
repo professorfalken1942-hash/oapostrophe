@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Container from "./Container";
 
 export default function About() {
   return (
     <section id="about" className="py-32 bg-white border-t border-[#e8e8e4]">
-      <div className="max-w-7xl mx-auto w-full px-8 md:px-16">
+      <Container>
         <div className="grid md:grid-cols-2 gap-16 items-start">
 
           <motion.div
@@ -49,7 +50,7 @@ export default function About() {
             </a>
           </motion.div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

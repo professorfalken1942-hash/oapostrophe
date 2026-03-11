@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Container from "./Container";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -33,7 +34,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-32 bg-[#f9f9f7] border-t border-[#e8e8e4]">
-      <div className="max-w-7xl mx-auto w-full px-8 md:px-16">
+      <Container>
         <div className="grid md:grid-cols-2 gap-16 items-start">
 
           <motion.div
@@ -97,7 +98,7 @@ export default function Contact() {
             {status === "error" && <p className="text-sm text-red-500 font-light">Something went wrong. Try again or email us directly.</p>}
           </motion.form>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

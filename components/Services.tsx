@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Container from "./Container";
 
 const services = [
   {
@@ -26,7 +27,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="py-32 bg-white border-t border-[#e8e8e4]">
-      <div className="max-w-7xl mx-auto w-full px-8 md:px-16">
+      <Container>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -81,7 +82,7 @@ export default function Services() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

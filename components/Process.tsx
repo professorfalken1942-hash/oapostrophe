@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Container from "./Container";
 
 const steps = [
   {
@@ -28,7 +29,7 @@ const steps = [
 export default function Process() {
   return (
     <section id="process" className="py-32 bg-[#f9f9f7] border-t border-[#e8e8e4]">
-      <div className="max-w-7xl mx-auto w-full px-8 md:px-16">
+      <Container>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -58,7 +59,7 @@ export default function Process() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

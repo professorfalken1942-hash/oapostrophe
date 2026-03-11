@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Container from "./Container";
 
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-end pt-16 bg-white">
-      <div className="max-w-7xl mx-auto w-full px-8 md:px-16 pb-24">
+      <Container>
+        <div className="pb-24">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -39,7 +41,8 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
-      </div>
+        </div>
+      </Container>
     </section>
   );
 }
