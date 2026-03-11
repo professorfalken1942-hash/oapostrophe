@@ -43,7 +43,7 @@ export default function About() {
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 mt-2 label-text text-[#0047FF] hover:gap-4 transition-all"
+              className="inline-flex items-center gap-2 mt-2 label-text text-[#0070ad] hover:gap-4 transition-all"
             >
               Let&apos;s talk <span>→</span>
             </a>

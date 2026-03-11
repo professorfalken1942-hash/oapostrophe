@@ -10,7 +10,7 @@ export default function Footer() {
         </p>
         <a
           href="mailto:hello@oapostrophe.com"
-          className="label-text text-[#444440] hover:text-[#0047FF] transition-colors"
+          className="label-text text-[#444440] hover:text-[#0070ad] transition-colors"
         >
           hello@oapostrophe.com
         </a>

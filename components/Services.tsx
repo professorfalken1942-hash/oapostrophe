@@ -68,7 +68,7 @@ export default function Services() {
               transition={{ duration: 0.6, delay: i * 0.08 }}
               className="grid md:grid-cols-4 gap-8 py-10 items-start"
             >
-              <span className="label-text text-[#0047FF]">{service.number}</span>
+              <span className="label-text text-[#0070ad]">{service.number}</span>
               <h3 className="serif text-2xl text-[#111111] md:col-span-1">{service.title}</h3>
               <p className="text-base text-[#444440] leading-relaxed md:col-span-1">{service.description}</p>
               <div className="flex flex-wrap gap-2 md:justify-end">

@@ -18,7 +18,7 @@ export default function Hero() {
           <h1 className="serif text-[clamp(3.5rem,8vw,8rem)] leading-[1.0] text-[#111111] mb-16">
             Built for<br />
             your goals.<br />
-            <em className="not-italic text-[#0047FF]">Not ours.</em>
+            <em className="not-italic text-[#0070ad]">Not ours.</em>
           </h1>
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 border-t border-[#e8e8e4] pt-10">
@@ -29,7 +29,7 @@ export default function Hero() {
             <div className="flex items-center gap-8 shrink-0">
               <a
                 href="#contact"
-                className="h-12 px-8 flex items-center bg-[#0047FF] text-white label-text hover:bg-[#0035cc] transition-colors"
+                className="h-12 px-8 flex items-center bg-[#0070ad] text-white label-text hover:bg-[#005580] transition-colors"
               >
                 Start a project
               </a>

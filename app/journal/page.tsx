@@ -47,10 +47,10 @@ export default async function JournalPage() {
                   <div className="flex flex-col gap-1">
                     <span className="label-text text-[#888884]">{formatDate(post.publishedAt)}</span>
                     {post.category && (
-                      <span className="label-text text-[#0047FF]">{post.category}</span>
+                      <span className="label-text text-[#0070ad]">{post.category}</span>
                     )}
                   </div>
-                  <h2 className="serif text-2xl text-[#111111] md:col-span-2 group-hover:text-[#0047FF] transition-colors">
+                  <h2 className="serif text-2xl text-[#111111] md:col-span-2 group-hover:text-[#0070ad] transition-colors">
                     {post.title}
                   </h2>
                   {post.excerpt && (

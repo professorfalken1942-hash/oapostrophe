@@ -35,7 +35,7 @@ const components = {
       <h3 className="serif text-2xl text-[#111111] mt-12 mb-4">{children}</h3>
     ),
     blockquote: ({ children }: { children?: React.ReactNode }) => (
-      <blockquote className="border-l-2 border-[#0047FF] pl-6 my-8 serif italic text-xl text-[#444440] leading-relaxed">
+      <blockquote className="border-l-2 border-[#0070ad] pl-6 my-8 serif italic text-xl text-[#444440] leading-relaxed">
         {children}
       </blockquote>
     ),
@@ -49,7 +49,7 @@ const components = {
     ),
     link: ({ value, children }: { value?: { href: string }; children?: React.ReactNode }) => (
       <a href={value?.href} target="_blank" rel="noopener noreferrer"
-        className="text-[#0047FF] underline underline-offset-4 hover:opacity-70 transition-opacity">
+        className="text-[#0070ad] underline underline-offset-4 hover:opacity-70 transition-opacity">
         {children}
       </a>
     ),
@@ -76,7 +76,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
                 ← Journal
               </Link>
               {post.category && (
-                <span className="label-text text-[#0047FF]">{post.category}</span>
+                <span className="label-text text-[#0070ad]">{post.category}</span>
               )}
             </div>
             <h1 className="serif text-[clamp(2.5rem,6vw,6rem)] leading-[1.05] text-[#111111] max-w-4xl mb-8">

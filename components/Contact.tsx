@@ -29,7 +29,7 @@ export default function Contact() {
     }
   };
 
-  const inputClass = "w-full h-12 bg-transparent border-b border-[#e8e8e4] px-0 text-sm text-[#111111] placeholder-[#bbb] focus:outline-none focus:border-[#0047FF] transition-colors font-light";
+  const inputClass = "w-full h-12 bg-transparent border-b border-[#e8e8e4] px-0 text-sm text-[#111111] placeholder-[#bbb] focus:outline-none focus:border-[#0070ad] transition-colors font-light";
 
   return (
     <section id="contact" className="py-32 bg-[#f9f9f7] border-t border-[#e8e8e4]">
@@ -88,9 +88,9 @@ export default function Contact() {
             <textarea placeholder="Tell us about your project" value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               required rows={4}
-              className="w-full bg-transparent border-b border-[#e8e8e4] px-0 py-3 text-sm text-[#111111] placeholder-[#bbb] focus:outline-none focus:border-[#0047FF] transition-colors font-light resize-none" />
+              className="w-full bg-transparent border-b border-[#e8e8e4] px-0 py-3 text-sm text-[#111111] placeholder-[#bbb] focus:outline-none focus:border-[#0070ad] transition-colors font-light resize-none" />
             <button type="submit" disabled={status === "loading"}
-              className="mt-2 h-12 w-full bg-[#0047FF] text-white label-text hover:bg-[#0035cc] transition-colors disabled:opacity-50">
+              className="mt-2 h-12 w-full bg-[#0070ad] text-white label-text hover:bg-[#005580] transition-colors disabled:opacity-50">
               {status === "loading" ? "Sending..." : "Send message"}
             </button>
             {status === "success" && <p className="text-sm text-green-600 font-light">Got it — we&apos;ll be in touch soon.</p>}

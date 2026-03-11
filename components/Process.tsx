@@ -52,7 +52,7 @@ export default function Process() {
               transition={{ duration: 0.6, delay: i * 0.08 }}
               className="grid md:grid-cols-4 gap-8 py-10 items-start"
             >
-              <span className="label-text text-[#0047FF]">{step.number}</span>
+              <span className="label-text text-[#0070ad]">{step.number}</span>
               <h3 className="serif text-2xl text-[#111111]">{step.title}</h3>
               <p className="text-base text-[#444440] leading-relaxed md:col-span-2">{step.description}</p>
             </motion.div>
