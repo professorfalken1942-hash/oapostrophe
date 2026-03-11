@@ -40,8 +40,10 @@ export default function Services() {
           <h2 className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-[0.9] tracking-tight text-[#0a0a0a] uppercase">
             What we<br />do
           </h2>
-          <p className="body-copy text-[#6b6b6b] font-light">
-            Three core disciplines. One studio. Complete ownership of your project from first commit to final deploy.
+          <p className="body-copy text-[#6b6b6b] font-light" style={{ lineHeight: '28px' }}>
+            Most agencies hand you off. Strategists to designers to developers to account managers — 
+            each one a little further from your actual problem. We don&apos;t work that way. 
+            One person owns the whole thing, start to finish, and that person cares whether it works.
           </p>
         </motion.div>
 
