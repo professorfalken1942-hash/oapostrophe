@@ -34,7 +34,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-32 bg-[#f9f9f7] border-t border-[#e8e8e4]">
-      <Container>
+      <Container headingPadding={true}>
         <div className="grid md:grid-cols-2 gap-16 items-start">
 
           <motion.div
@@ -42,6 +42,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
+            className="px-6 md:px-6"
           >
             <h2 className="serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] text-[#111111] mb-8">
               Start a project.
@@ -58,7 +59,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-6 px-6 md:px-6"
           >
             <div className="grid grid-cols-2 gap-8">
               <input type="text" placeholder="Your name" value={form.name}

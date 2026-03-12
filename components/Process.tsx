@@ -29,7 +29,7 @@ const steps = [
 export default function Process() {
   return (
     <section id="process" className="py-32 bg-[#f9f9f7] border-t border-[#e8e8e4]">
-      <Container>
+      <Container headingPadding={true}>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -43,7 +43,7 @@ export default function Process() {
           </h2>
         </motion.div>
 
-        <div className="flex flex-col divide-y divide-[#e8e8e4]">
+        <div className="flex flex-col divide-y divide-[#e8e8e4] px-6 md:px-6">
           {steps.map((step, i) => (
             <motion.div
               key={step.number}

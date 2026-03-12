@@ -27,14 +27,14 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="py-32 bg-white border-t border-[#e8e8e4]">
-      <Container>
+      <Container headingPadding={true}>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="grid md:grid-cols-2 gap-16 mb-24"
+          className="grid md:grid-cols-2 gap-16 mb-24 px-6 md:px-6"
         >
           <h2 className="serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] text-[#111111]">
             What we do
@@ -59,7 +59,7 @@ export default function Services() {
           </div>
         </motion.div>
 
-        <div className="flex flex-col divide-y divide-[#e8e8e4]">
+        <div className="flex flex-col divide-y divide-[#e8e8e4] px-6 md:px-6">
           {services.map((service, i) => (
             <motion.div
               key={service.number}

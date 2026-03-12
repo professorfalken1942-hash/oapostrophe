@@ -6,7 +6,7 @@ import Container from "./Container";
 export default function About() {
   return (
     <section id="about" className="py-32 bg-white border-t border-[#e8e8e4]">
-      <Container>
+      <Container headingPadding={true}>
         <div className="grid md:grid-cols-2 gap-16 items-start">
 
           <motion.div
@@ -14,6 +14,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
+            className="px-6 md:px-6"
           >
             <h2 className="serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] text-[#111111]">
               One person.<br />
