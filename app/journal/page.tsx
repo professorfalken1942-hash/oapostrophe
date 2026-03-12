@@ -24,7 +24,7 @@ export default async function JournalPage() {
   return (
     <>
       <Nav />
-      <main className="pt-24">
+      <main className="pt-32">
         <div className="max-w-7xl mx-auto w-full px-8 md:px-16 py-24">
 
           <div className="mb-24">

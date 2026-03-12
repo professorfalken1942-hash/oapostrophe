@@ -66,7 +66,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
   return (
     <>
       <Nav />
-      <main className="pt-24">
+      <main className="pt-32">
         <div className="max-w-7xl mx-auto w-full px-8 md:px-16">
 
           {/* Header */}
