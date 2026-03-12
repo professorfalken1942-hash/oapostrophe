@@ -66,17 +66,24 @@ export default async function PostPage({ params }: { params: { slug: string } })
   return (
     <>
       <Nav />
-      <main className="pt-16">
+      <main className="pt-24">
         <div className="max-w-7xl mx-auto w-full px-8 md:px-16">
 
           {/* Header */}
           <div className="py-24 border-b border-[#e8e8e4]">
             <div className="flex items-center gap-6 mb-10">
+              <Link href="/" className="label-text text-[#888884] hover:text-[#111111] transition-colors">
+                ← Home
+              </Link>
+              <span className="text-[#e8e8e4]">|</span>
               <Link href="/journal" className="label-text text-[#888884] hover:text-[#111111] transition-colors">
-                ← Journal
+                Journal
               </Link>
               {post.category && (
-                <span className="label-text text-[#0070ad]">{post.category}</span>
+                <>
+                  <span className="text-[#e8e8e4]">|</span>
+                  <span className="label-text text-[#0070ad]">{post.category}</span>
+                </>
               )}
             </div>
             <h1 className="serif text-[clamp(2.5rem,6vw,6rem)] leading-[1.05] text-[#111111] max-w-4xl mb-8">
