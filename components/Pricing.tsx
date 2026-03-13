@@ -97,7 +97,7 @@ export default function Pricing() {
                 {/* CTA Button */}
                 <a
                   href="#contact"
-                  className={`block text-center h-12 flex items-center justify-center rounded font-semibold mb-8 transition-colors ${
+                  className={`block text-center h-12 px-12 flex items-center justify-center rounded font-semibold mb-8 transition-colors ${
                     plan.highlight
                       ? "bg-[#0070ad] text-white hover:bg-[#005580]"
                       : "border border-[#0070ad] text-[#0070ad] hover:bg-[#0070ad] hover:text-white"

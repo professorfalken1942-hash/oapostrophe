@@ -109,7 +109,7 @@ export default function CaseStudies() {
                     href={study.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 h-12 px-8 bg-[#0070ad] text-white font-semibold rounded hover:bg-[#005580] transition-colors w-fit"
+                    className="inline-flex items-center gap-2 h-12 px-12 bg-[#0070ad] text-white font-semibold rounded hover:bg-[#005580] transition-colors w-fit"
                   >
                     View site →
                   </a>
@@ -136,7 +136,7 @@ export default function CaseStudies() {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 h-12 px-8 bg-[#0070ad] text-white font-semibold rounded hover:bg-[#005580] transition-colors"
+            className="inline-flex items-center gap-2 h-12 px-12 bg-[#0070ad] text-white font-semibold rounded hover:bg-[#005580] transition-colors"
           >
             Start a project
           </a>

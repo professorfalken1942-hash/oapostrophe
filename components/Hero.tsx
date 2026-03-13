@@ -31,7 +31,7 @@ export default function Hero() {
             <div className="flex items-center gap-8 shrink-0">
               <a
                 href="#contact"
-                className="h-12 px-8 flex items-center bg-[#0070ad] text-white label-text hover:bg-[#005580] transition-colors"
+                className="h-12 px-12 flex items-center bg-[#0070ad] text-white label-text hover:bg-[#005580] transition-colors"
               >
                 Start a project
               </a>

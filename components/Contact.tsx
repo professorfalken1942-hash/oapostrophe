@@ -92,7 +92,7 @@ export default function Contact() {
               required rows={4}
               className="w-full bg-transparent border-b border-[#e8e8e4] px-0 py-3 text-sm text-[#111111] placeholder-[#bbb] focus:outline-none focus:border-[#0070ad] transition-colors font-light resize-none" />
             <button type="submit" disabled={status === "loading"}
-              className="mt-2 h-12 w-full bg-[#0070ad] text-white label-text hover:bg-[#005580] transition-colors disabled:opacity-50">
+              className="mt-2 h-12 px-12 w-full bg-[#0070ad] text-white label-text hover:bg-[#005580] transition-colors disabled:opacity-50">
               {status === "loading" ? "Sending..." : "Send message"}
             </button>
             {status === "success" && <p className="text-sm text-green-600 font-light">Got it — we&apos;ll be in touch soon.</p>}
