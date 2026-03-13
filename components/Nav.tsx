@@ -18,6 +18,7 @@ export default function Nav() {
           <a href="/#services" className="hover:text-[#111111] transition-colors">Services</a>
           <a href="/#process" className="hover:text-[#111111] transition-colors">Process</a>
           <a href="/#pricing" className="hover:text-[#111111] transition-colors">Pricing</a>
+          <a href="/#case-studies" className="hover:text-[#111111] transition-colors">Work</a>
           <a href="/#about" className="hover:text-[#111111] transition-colors">About</a>
           <a href="/journal" className="hover:text-[#111111] transition-colors">Journal</a>
           <a
