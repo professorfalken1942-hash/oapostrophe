@@ -82,7 +82,7 @@ export default function Pricing() {
                   : "border-[#e8e8e4] bg-white hover:border-[#0070ad]"
               }`}
             >
-              <div className="p-8">
+              <div className="p-12">
                 {/* Header */}
                 <div className="mb-8">
                   <h3 className="serif text-2xl text-[#111111] mb-2">
@@ -128,7 +128,7 @@ export default function Pricing() {
         </div>
 
         {/* FAQ-style note */}
-        <div className="bg-[#f9f9f7] rounded border border-[#e8e8e4] p-8">
+        <div className="bg-[#f9f9f7] rounded border border-[#e8e8e4] p-12">
           <p className="body-copy text-[#6b6b6b]">
             <strong>All projects include:</strong> discovery call, detailed proposal, fixed price quote, weekly check-ins, code documentation, and handoff. We don't do hourly billing — you know the cost upfront.
           </p>

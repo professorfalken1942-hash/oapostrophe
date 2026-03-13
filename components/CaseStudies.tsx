@@ -117,7 +117,7 @@ export default function CaseStudies() {
               </div>
 
               {/* Preview */}
-              <div className="bg-[#f9f9f7] p-8 md:p-12 flex items-center justify-center min-h-80">
+              <div className="bg-[#f9f9f7] p-12 flex items-center justify-center min-h-80">
                 <div className="text-center">
                   <p className="serif text-5xl italic text-[#0070ad] mb-4">P</p>
                   <p className="text-sm text-[#6b6b6b] max-w-xs">
