@@ -82,7 +82,7 @@ export default function Pricing() {
                   : "border-[#e8e8e4] bg-white hover:border-[#0070ad]"
               }`}
             >
-              <div className="p-12">
+              <div className="p-16">
                 {/* Header */}
                 <div className="mb-8 pb-8 border-b border-[#e8e8e4]">
                   <h3 className="serif text-2xl text-[#111111] mb-3">
