@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, FullWidthHeading } from "./Container";
+import Container from "./Container";
 
 interface Plan {
   name: string;
@@ -65,11 +65,11 @@ export default function Pricing() {
     <section id="pricing" className="py-24 bg-white border-t border-[#e8e8e4]">
       <Container>
         <div className="mb-24">
-          <FullWidthHeading>
+          <h2 className="serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] text-[#111111]">
             Simple,
             <br />
             <em>predictable pricing.</em>
-          </FullWidthHeading>
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
