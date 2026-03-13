@@ -55,7 +55,8 @@ body {
 }
 
 section{
-  margin: 32px !important;
-  padding-left:32px !important;
-  padding-right:32px !important;
+  margin: 48px !important;
+  padding-left:48px !important;
+  padding-right:48px !important;
+  padding-top:48px;
 }
