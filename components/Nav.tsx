@@ -17,6 +17,7 @@ export default function Nav() {
         <div className="flex items-center gap-10 label-text text-[#444440]">
           <a href="/#services" className="hover:text-[#111111] transition-colors">Services</a>
           <a href="/#process" className="hover:text-[#111111] transition-colors">Process</a>
+          <a href="/#pricing" className="hover:text-[#111111] transition-colors">Pricing</a>
           <a href="/#about" className="hover:text-[#111111] transition-colors">About</a>
           <a href="/journal" className="hover:text-[#111111] transition-colors">Journal</a>
           <a
