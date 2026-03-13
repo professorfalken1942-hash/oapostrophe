@@ -84,7 +84,7 @@ export default function Pricing() {
             >
               <div className="p-12">
                 {/* Header */}
-                <div className="mb-8 pb-8">
+                <div className="mb-12 pb-8">
                   <h3 className="serif text-2xl text-[#111111] mb-3">
                     {plan.name}
                   </h3>
@@ -95,22 +95,20 @@ export default function Pricing() {
                 </div>
 
                 {/* CTA Button */}
-                <div className="mb-8 pb-8">
-                  <a
-                    href="#contact"
-                    className={`block text-center h-12 px-12 flex items-center justify-center rounded font-semibold transition-colors ${
-                      plan.highlight
-                        ? "bg-[#0070ad] text-white hover:bg-[#005580]"
-                        : "border border-[#0070ad] text-[#0070ad] hover:bg-[#0070ad] hover:text-white"
-                    }`}
-                  >
-                    {plan.cta}
-                  </a>
-                </div>
+                <a
+                  href="#contact"
+                  className={`block text-center h-12 px-12 flex items-center justify-center rounded font-semibold mb-12 transition-colors ${
+                    plan.highlight
+                      ? "bg-[#0070ad] text-white hover:bg-[#005580]"
+                      : "border border-[#0070ad] text-[#0070ad] hover:bg-[#0070ad] hover:text-white"
+                  }`}
+                >
+                  {plan.cta}
+                </a>
 
                 {/* Features */}
-                <div className="border-t border-[#e8e8e4] pt-8">
-                  <p className="text-xs font-semibold text-[#444440] uppercase mb-8">
+                <div className="border-t border-[#e8e8e4] pt-12">
+                  <p className="text-xs font-semibold text-[#444440] uppercase mb-6">
                     Includes
                   </p>
                   <ul className="space-y-4">
