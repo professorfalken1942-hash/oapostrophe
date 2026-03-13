@@ -84,11 +84,11 @@ export default function Pricing() {
             >
               <div className="p-12">
                 {/* Header */}
-                <div className="mb-8">
-                  <h3 className="serif text-2xl text-[#111111] mb-2">
+                <div className="mb-12 pb-8">
+                  <h3 className="serif text-2xl text-[#111111] mb-3">
                     {plan.name}
                   </h3>
-                  <p className="text-4xl font-bold text-[#0070ad] mb-3">
+                  <p className="text-4xl font-bold text-[#0070ad] mb-4">
                     {plan.price}
                   </p>
                   <p className="text-sm text-[#6b6b6b]">{plan.description}</p>
@@ -97,7 +97,7 @@ export default function Pricing() {
                 {/* CTA Button */}
                 <a
                   href="#contact"
-                  className={`block text-center h-12 px-12 flex items-center justify-center rounded font-semibold mb-8 transition-colors ${
+                  className={`block text-center h-12 px-12 flex items-center justify-center rounded font-semibold mb-12 transition-colors ${
                     plan.highlight
                       ? "bg-[#0070ad] text-white hover:bg-[#005580]"
                       : "border border-[#0070ad] text-[#0070ad] hover:bg-[#0070ad] hover:text-white"
@@ -107,11 +107,11 @@ export default function Pricing() {
                 </a>
 
                 {/* Features */}
-                <div className="border-t border-[#e8e8e4] pt-8">
-                  <p className="text-xs font-semibold text-[#444440] uppercase mb-4">
+                <div className="border-t border-[#e8e8e4] pt-12">
+                  <p className="text-xs font-semibold text-[#444440] uppercase mb-6">
                     Includes
                   </p>
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <span className="text-[#0070ad] font-bold mt-0.5">
