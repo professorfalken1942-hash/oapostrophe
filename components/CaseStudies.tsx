@@ -2,6 +2,7 @@
 
 import Container from "./Container";
 import Link from "next/link";
+import Image from "next/image";
 
 interface CaseStudy {
   slug: string;
@@ -12,6 +13,7 @@ interface CaseStudy {
   solution: string;
   results: string[];
   image?: string;
+  imageAlt?: string;
   link?: string;
 }
 
@@ -32,6 +34,8 @@ const caseStudies: CaseStudy[] = [
       "Mobile-first design → 60%+ traffic from phones",
       "Sanity CMS allows Julianna to update portfolio without developer help",
     ],
+    image: "/pastel-preview.svg",
+    imageAlt: "Pastel makeup artist portfolio website",
     link: "https://pastelmakeupandstyle.com",
   },
 ];
@@ -117,13 +121,22 @@ export default function CaseStudies() {
               </div>
 
               {/* Preview */}
-              <div className="bg-[#f9f9f7] p-12 flex items-center justify-center min-h-80">
-                <div className="text-center">
-                  <p className="serif text-5xl italic text-[#0070ad] mb-4">P</p>
-                  <p className="text-sm text-[#6b6b6b] max-w-xs">
-                    Clean, Scandinavian portfolio for a wedding makeup artist. Integrated booking, mobile-first design.
-                  </p>
-                </div>
+              <div className="bg-[#f9f9f7] p-12 flex items-center justify-center min-h-80 relative">
+                {study.image ? (
+                  <Image
+                    src={study.image}
+                    alt={study.imageAlt || study.title}
+                    fill
+                    className="object-cover rounded"
+                  />
+                ) : (
+                  <div className="text-center">
+                    <p className="serif text-5xl italic text-[#0070ad] mb-4">P</p>
+                    <p className="text-sm text-[#6b6b6b] max-w-xs">
+                      Clean, Scandinavian portfolio for a wedding makeup artist. Integrated booking, mobile-first design.
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           ))}

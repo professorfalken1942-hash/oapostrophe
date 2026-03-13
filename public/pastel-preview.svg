@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Browser frame -->
+  <rect width="800" height="600" fill="#ffffff" stroke="#e8e8e4" stroke-width="2"/>
+  
+  <!-- Title bar -->
+  <rect width="800" height="40" fill="#f9f9f7" stroke="#e8e8e4" stroke-width="1"/>
+  <circle cx="20" cy="20" r="4" fill="#0070ad"/>
+  <circle cx="36" cy="20" r="4" fill="#0070ad"/>
+  <circle cx="52" cy="20" r="4" fill="#0070ad"/>
+  
+  <!-- Header -->
+  <rect y="40" width="800" height="80" fill="#ffffff" stroke="#e8e8e4" stroke-width="1"/>
+  <text x="40" y="75" font-family="serif" font-size="24" font-style="italic" fill="#0070ad">Pastel</text>
+  
+  <!-- Hero section -->
+  <rect y="120" width="800" height="200" fill="#f9f9f7"/>
+  <text x="40" y="200" font-family="serif" font-size="48" font-weight="bold" fill="#111111">Wedding</text>
+  <text x="40" y="250" font-family="serif" font-size="48" font-weight="bold" fill="#111111">Makeup</text>
+  <text x="40" y="300" font-family="serif" font-size="48" font-weight="bold" fill="#111111">Artist</text>
+  
+  <!-- Gallery grid preview -->
+  <rect x="40" y="340" width="160" height="130" fill="#e8e8e4"/>
+  <rect x="220" y="340" width="160" height="130" fill="#e8e8e4"/>
+  <rect x="400" y="340" width="160" height="130" fill="#e8e8e4"/>
+  <rect x="580" y="340" width="160" height="130" fill="#e8e8e4"/>
+  
+  <!-- CTA button -->
+  <rect x="40" y="490" width="120" height="40" fill="#0070ad" rx="4"/>
+  <text x="100" y="515" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Book Now</text>
+</svg>
