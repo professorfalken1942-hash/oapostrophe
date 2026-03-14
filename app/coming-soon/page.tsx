@@ -1,6 +1,4 @@
-"use client";
-
-export default function Home() {
+export default function ComingSoon() {
   return (
     <main className="min-h-screen bg-white flex items-center justify-center px-4">
       <div className="text-center max-w-2xl">
