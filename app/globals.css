@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+section {
+  margin: 48px;
+}
+
 :root {
   --blue: #0070ad;
   --black: #111111;
