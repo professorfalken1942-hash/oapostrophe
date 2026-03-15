@@ -10,7 +10,10 @@ export default function Nav() {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 bg-white/96 backdrop-blur-sm"
     >
-      <div className="max-w-7xl mx-auto px-8 md:px-16 h-16 flex items-center justify-between border-b border-[#e8e8e4]">
+      <div
+        className="max-w-8xl mx-auto px-8 md:px-16 h-16 flex items-center justify-between border-b border-[#e8e8e4]"
+        style={{ marginRight: 32 }}
+      >
         <a href="#" className="serif text-xl italic text-[#111111]">
           o&apos;
         </a>
