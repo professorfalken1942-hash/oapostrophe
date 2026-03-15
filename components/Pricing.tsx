@@ -3,42 +3,20 @@
 import { motion } from "framer-motion";
 import Container from "./Container";
 
-interface Plan {
-  number: string;
-  name: string;
-  price: string;
-  description: string;
-  features: string[];
-  cta: string;
-  highlight?: boolean;
-}
-
-const plans: Plan[] = [
+const plans = [
   {
     number: "01",
     name: "Starter",
     price: "$5,000",
     description: "Landing pages, small sites, and MVPs",
-    features: [
-      "Landing page or small web app",
-      "Responsive design",
-      "Basic SEO & deployment",
-      "Email support",
-    ],
-    cta: "Get started",
+    features: ["Landing page or small web app", "Responsive design", "Basic SEO & deployment", "Email support"],
   },
   {
     number: "02",
     name: "Professional",
     price: "$10,000",
     description: "For businesses that need more than a brochure",
-    features: [
-      "Full-featured web application",
-      "API & database integration",
-      "Auth, payments, and advanced features",
-      "Slack support & post-launch optimization",
-    ],
-    cta: "Let's build",
+    features: ["Full-featured web application", "API & database integration", "Auth, payments & advanced features", "Slack support & post-launch optimization"],
     highlight: true,
   },
   {
@@ -46,13 +24,7 @@ const plans: Plan[] = [
     name: "Enterprise",
     price: "Custom",
     description: "Complex systems and long-term engagements",
-    features: [
-      "Everything in Professional",
-      "Custom architecture & integrations",
-      "Ongoing retainer & priority support",
-      "Quarterly strategy reviews",
-    ],
-    cta: "Let's talk",
+    features: ["Everything in Professional", "Custom architecture & integrations", "Ongoing retainer & priority support", "Quarterly strategy reviews"],
   },
 ];
 
@@ -67,7 +39,7 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mb-32 px-6 md:px-6"
+          className="mb-32 px-6"
         >
           <h2 className="serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] text-[#111111]">
             Simple,<br />
@@ -75,63 +47,54 @@ export default function Pricing() {
           </h2>
         </motion.div>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-px bg-[#e8e8e4]">
+        {/* Plans */}
+        <div className="flex flex-col divide-y divide-[#e8e8e4]">
           {plans.map((plan, i) => (
             <motion.div
-              key={plan.name}
-              initial={{ opacity: 0, y: 20 }}
+              key={plan.number}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-white flex flex-col gap-10 p-14"
+              transition={{ duration: 0.6, delay: i * 0.08 }}
+              className="grid md:grid-cols-12 gap-8 py-16 px-6 items-start"
             >
-              {/* Number + badge */}
-              <div className="flex items-start justify-between">
+              {/* Number */}
+              <div className="md:col-span-1">
                 <span className="label-text text-[#0070ad]">{plan.number}</span>
-                {plan.highlight && (
-                  <span className="label-text text-[#0070ad] border border-[#0070ad] px-3 py-1">
-                    Popular
-                  </span>
-                )}
               </div>
 
-              {/* Name + price */}
-              <div className="flex flex-col gap-2">
-                <h3 className="serif text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.1] text-[#111111]">
-                  {plan.name}
-                </h3>
-                <p className={`serif text-[clamp(2rem,3.5vw,3rem)] leading-none ${
-                  plan.highlight ? "text-[#0070ad]" : "text-[#111111]"
-                }`}>
-                  {plan.price}
-                </p>
-                <p className="body-copy text-sm text-[#888884] mt-1">
-                  {plan.description}
-                </p>
+              {/* Name */}
+              <div className="md:col-span-2">
+                <h3 className="serif text-2xl text-[#111111]">{plan.name}</h3>
+                <p className="body-copy text-sm text-[#888884] mt-2 max-w-none">{plan.description}</p>
               </div>
 
               {/* Features */}
-              <ul className="flex flex-col gap-3 flex-1">
-                {plan.features.map((feature, j) => (
+              <ul className="md:col-span-5 flex flex-col gap-3">
+                {plan.features.map((f, j) => (
                   <li key={j} className="flex items-start gap-3">
                     <span className="text-[#0070ad] shrink-0 mt-0.5">✓</span>
-                    <span className="body-copy text-sm text-[#6b6b6b] leading-snug">{feature}</span>
+                    <span className="body-copy text-sm text-[#6b6b6b] leading-snug max-w-none">{f}</span>
                   </li>
                 ))}
               </ul>
 
-              {/* CTA */}
-              <a
-                href="#contact"
-                className={`flex items-center justify-center h-12 px-8 label-text transition-colors mt-auto ${
-                  plan.highlight
-                    ? "bg-[#0070ad] text-white hover:bg-[#005580]"
-                    : "border border-[#e8e8e4] text-[#444440] hover:border-[#0070ad] hover:text-[#0070ad]"
-                }`}
-              >
-                {plan.cta}
-              </a>
+              {/* Price + CTA */}
+              <div className="md:col-span-4 flex flex-col items-start md:items-end gap-6">
+                <p className={`serif text-[clamp(2.5rem,4vw,3.5rem)] leading-none ${plan.highlight ? "text-[#0070ad]" : "text-[#111111]"}`}>
+                  {plan.price}
+                </p>
+                <a
+                  href="#contact"
+                  className={`h-12 px-10 flex items-center label-text transition-colors ${
+                    plan.highlight
+                      ? "bg-[#0070ad] text-white hover:bg-[#005580]"
+                      : "border border-[#e8e8e4] text-[#444440] hover:border-[#0070ad] hover:text-[#0070ad]"
+                  }`}
+                >
+                  {plan.highlight ? "Let's build" : plan.number === "01" ? "Get started" : "Let's talk"}
+                </a>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -142,9 +105,9 @@ export default function Pricing() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-px bg-[#f9f9f7] px-14 py-12"
+          className="mt-16 pt-10 border-t border-[#e8e8e4] px-6"
         >
-          <p className="body-copy text-sm text-[#888884] max-w-2xl">
+          <p className="body-copy text-sm text-[#888884]">
             All projects include a discovery call, fixed price quote, weekly check-ins, and full handoff.
             No hourly billing — you know the cost upfront.
           </p>
