@@ -6,16 +6,6 @@ import Container from "./Container";
 const services = [
   {
     number: "01",
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="4" width="28" height="20" rx="2" stroke="#0070ad" strokeWidth="1.5" fill="none"/>
-        <path d="M2 10h28" stroke="#0070ad" strokeWidth="1.5"/>
-        <path d="M8 28h16" stroke="#0070ad" strokeWidth="1.5" strokeLinecap="round"/>
-        <path d="M16 24v4" stroke="#0070ad" strokeWidth="1.5" strokeLinecap="round"/>
-        <path d="M10 15l3 3-3 3" stroke="#0070ad" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M15 21h5" stroke="#0070ad" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-    ),
     title: "Web Development",
     description:
       "Pixel-perfect, performant websites built with modern frameworks. From landing pages to complex web apps — designed to convert and built to scale.",
@@ -23,13 +13,6 @@ const services = [
   },
   {
     number: "02",
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 8h20M6 16h20M6 24h12" stroke="#0070ad" strokeWidth="1.5" strokeLinecap="round"/>
-        <circle cx="25" cy="24" r="4" stroke="#0070ad" strokeWidth="1.5" fill="none"/>
-        <path d="M28 27l2 2" stroke="#0070ad" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-    ),
     title: "Full-Stack Engineering",
     description:
       "End-to-end product development. APIs, databases, auth, deployments — the complete stack handled by one person who cares about every layer.",
@@ -37,13 +20,6 @@ const services = [
   },
   {
     number: "03",
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="16" r="13" stroke="#0070ad" strokeWidth="1.5" fill="none"/>
-        <path d="M16 10v6l4 2" stroke="#0070ad" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M10 5.5C8 7.5 6.5 10 6.5 13" stroke="#0070ad" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-    ),
     title: "Consulting",
     description:
       "Strategic technical guidance without the overhead. Architecture reviews, tech stack decisions, team augmentation, or a second opinion when it matters most.",
@@ -98,11 +74,8 @@ export default function Services() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="bg-white flex flex-col gap-10 p-12"
             >
-              {/* Top row: number + icon */}
-              <div className="flex items-start justify-between">
-                <span className="label-text text-[#0070ad]">{service.number}</span>
-                <div className="opacity-80">{service.icon}</div>
-              </div>
+              {/* Number */}
+              <span className="label-text text-[#0070ad]">{service.number}</span>
 
               {/* Title */}
               <h3 className="serif text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.1] text-[#111111]">
