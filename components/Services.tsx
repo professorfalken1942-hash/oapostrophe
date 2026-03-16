@@ -20,7 +20,7 @@ const services = [
   },
   {
     number: "03",
-    title: "Consulting",
+      title: "Consulting",
     description:
       "Strategic technical guidance without the overhead. Architecture reviews, tech stack decisions, team augmentation, or a second opinion when it matters most.",
     tags: ["Architecture", "Code Review", "Strategy", "AI Integration"],
