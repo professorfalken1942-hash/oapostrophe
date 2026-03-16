@@ -57,5 +57,8 @@ body {
   font-weight: 400;
   text-transform: uppercase;
 }
+.grid > div{
+padding: 2rem;
+}
 
 
