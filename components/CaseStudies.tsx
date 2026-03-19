@@ -81,7 +81,7 @@ export default function CaseStudies() {
           {caseStudies.map((study) => (
             <div
               key={study.slug}
-              className="grid md:grid-cols-2 gap-16 items-start bg-white rounded border border-[#e8e8e4] overflow-hidden"
+              className="grid md:grid-cols-2 gap-0 items-start bg-white rounded border border-[#e8e8e4] overflow-hidden"
             >
               {/* Content */}
               <div className="p-8 md:p-12 flex flex-col justify-between">
