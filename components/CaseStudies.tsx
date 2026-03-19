@@ -17,7 +17,11 @@ interface CaseStudy {
   link?: string;
 }
 
-const caseStudies: CaseStudy[] = [
+interface CaseStudyGallery extends CaseStudy {
+  gallery?: Array<{ src: string; alt: string; caption?: string }>;
+}
+
+const caseStudies: CaseStudyGallery[] = [
   {
     slug: "pastel",
     title: "Pastel — Wedding Makeup Artist Portfolio",
@@ -26,17 +30,40 @@ const caseStudies: CaseStudy[] = [
     challenge:
       "A talented makeup artist with a thriving local business but no online presence. Needed a portfolio site that showcased work, built trust with brides, and integrated booking capabilities without the overhead of managing multiple platforms.",
     solution:
-      "Built a clean, Scandinavian-inspired portfolio site on Next.js with Sanity CMS for content management. Integrated HoneyBook for seamless booking — brides can browse the portfolio, see availability, and book directly without leaving the site. Mobile-first design because couples research on their phones.",
+      "Built a clean, Scandinavian-inspired portfolio site on Next.js with Sanity CMS for content management. Integrated HoneyBook for seamless booking — brides can browse the portfolio, see availability, and book directly without leaving the site. Mobile-first design because couples research on their phones. Pink accent color (rgb(255, 174, 215)) drives brand recognition; Material Design micro-interactions enhance UX.",
     results: [
       "Portfolio went live in 2 weeks",
       "Integrated booking system (0 friction for clients)",
       "SEO-optimized for local wedding searches",
       "Mobile-first design → 60%+ traffic from phones",
       "Sanity CMS allows Julianna to update portfolio without developer help",
+      "Micro-interactions (button hover, card lift) improve perceived polish",
     ],
-    image: "/pastel-preview.svg",
+    image: "/case-studies/pastel/pastel-hero.png",
     imageAlt: "Pastel makeup artist portfolio website",
     link: "https://pastelmakeupandstyle.com",
+    gallery: [
+      {
+        src: "/case-studies/pastel/pastel-hero.png",
+        alt: "Pastel homepage hero with pink accent",
+        caption: "Homepage",
+      },
+      {
+        src: "/case-studies/pastel/pastel-services.png",
+        alt: "Services portfolio showcase",
+        caption: "Services",
+      },
+      {
+        src: "/case-studies/pastel/pastel-booking.png",
+        alt: "HoneyBook booking integration",
+        caption: "Booking",
+      },
+      {
+        src: "/case-studies/pastel/pastel-details.png",
+        alt: "Portfolio details and testimonials",
+        caption: "Details",
+      },
+    ],
   },
 ];
 
@@ -120,19 +147,56 @@ export default function CaseStudies() {
                 )}
               </div>
 
-              {/* Preview */}
-              <div className="bg-[#f9f9f7] p-12 flex items-center justify-center min-h-80 relative">
-                {study.image ? (
+              {/* Gallery */}
+              <div className="bg-[#f9f9f7] p-8 flex flex-col gap-8">
+                {study.gallery && study.gallery.length > 0 ? (
+                  <>
+                    {/* Featured image */}
+                    <div className="relative w-full h-64 bg-white rounded overflow-hidden">
+                      <Image
+                        src={study.gallery[0].src}
+                        alt={study.gallery[0].alt}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+
+                    {/* Gallery grid */}
+                    <div className="grid grid-cols-3 gap-3">
+                      {study.gallery.slice(1).map((img, idx) => (
+                        <div
+                          key={idx}
+                          className="relative h-24 bg-white rounded overflow-hidden hover:shadow-md transition-shadow"
+                        >
+                          <Image
+                            src={img.src}
+                            alt={img.alt}
+                            fill
+                            className="object-cover"
+                          />
+                          {img.caption && (
+                            <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                              <p className="text-white text-xs font-semibold">
+                                {img.caption}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                ) : study.image ? (
                   <Image
                     src={study.image}
                     alt={study.imageAlt || study.title}
-                    fill
-                    className="object-cover rounded"
+                    width={500}
+                    height={400}
+                    className="w-full rounded object-cover"
                   />
                 ) : (
-                  <div className="text-center">
+                  <div className="text-center py-16">
                     <p className="serif text-5xl italic text-[#0070ad] mb-4">P</p>
-                    <p className="text-sm text-[#6b6b6b] max-w-xs">
+                    <p className="text-sm text-[#6b6b6b] max-w-xs mx-auto">
                       Clean, Scandinavian portfolio for a wedding makeup artist. Integrated booking, mobile-first design.
                     </p>
                   </div>
