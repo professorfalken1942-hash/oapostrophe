@@ -81,10 +81,10 @@ export default function CaseStudies() {
           {caseStudies.map((study) => (
             <div
               key={study.slug}
-              className="grid md:grid-cols-2 gap-16 items-start bg-white rounded border border-[#e8e8e4] p-8 md:p-12"
+              className="grid md:grid-cols-2 gap-16 items-start bg-white rounded border border-[#e8e8e4] overflow-hidden"
             >
               {/* Content */}
-              <div className="flex flex-col justify-between">
+              <div className="p-8 md:p-12 flex flex-col justify-between">
                 <div>
                   <div className="mb-6">
                     <p className="label-text text-[#0070ad] font-semibold uppercase mb-2">
@@ -148,7 +148,7 @@ export default function CaseStudies() {
               </div>
 
               {/* Gallery */}
-              <div className="flex flex-col gap-8">
+              <div className="bg-[#f9f9f7] p-8 flex flex-col gap-8">
                 {study.gallery && study.gallery.length > 0 ? (
                   <>
                     {/* Featured image */}
