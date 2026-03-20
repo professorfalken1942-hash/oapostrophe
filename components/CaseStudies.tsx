@@ -69,15 +69,15 @@ const caseStudies: CaseStudyGallery[] = [
 
 export default function CaseStudies() {
   return (
-    <section id="case-studies" className="py-24 bg-[#f9f9f7] border-t border-[#e8e8e4]">
+    <section id="case-studies" className="py-56 bg-[#f9f9f7] border-t border-[#e8e8e4]">
       <Container>
-        <div className="mb-24">
+        <div className="mb-32">
           <h2 className="serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] text-[#111111]">
             Work we&apos;re proud of.
           </h2>
         </div>
 
-        <div className="space-y-24">
+        <div className="space-y-32">
           {caseStudies.map((study) => (
             <div
               key={study.slug}

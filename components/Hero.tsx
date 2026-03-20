@@ -5,19 +5,19 @@ import Container from "./Container";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-end pt-16 bg-white">
+    <section className="min-h-screen flex flex-col justify-end py-24 bg-white">
       <Container>
-        <div className="pb-24">
+        <div className="pb-32">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="label-text text-[#444440] mb-16">
+          <p className="label-text text-[#444440] mb-8">
             oapostrophe — Digital Studio
           </p>
 
-          <h1 className="serif text-[clamp(3.5rem,8vw,8rem)] leading-[1.0] text-[#111111] mb-16">
+          <h1 className="serif text-[clamp(3.5rem,8vw,8rem)] leading-[1.0] text-[#111111] mb-12">
             Built for<br />
             your goals.<br />
             <em className="not-italic text-[#0070ad]">Not ours.</em>
@@ -28,15 +28,15 @@ export default function Hero() {
               Boutique web development, full-stack engineering, and strategic consulting — 
               AI-assisted, fast turnaround, with the kind of attention a big agency can&apos;t afford to give you.
             </p>
-            <div className="flex items-center gap-8 shrink-0">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-6 shrink-0">
               <a
                 href="#contact"
-                className="h-12 px-12 flex items-center bg-[#0070ad] text-white label-text hover:bg-[#005580] transition-colors"
+                className="py-3 px-8 flex items-center bg-[#0070ad] text-white label-text font-semibold hover:bg-[#005580] transition-all hover:shadow-md"
               >
                 Start a project
               </a>
-              <a href="#services" className="label-text text-[#444440] hover:text-[#111111] transition-colors underline underline-offset-4">
-                See what we do
+              <a href="#services" className="label-text text-[#444440] hover:text-[#0070ad] transition-colors underline underline-offset-4">
+                See what we do →
               </a>
             </div>
           </div>

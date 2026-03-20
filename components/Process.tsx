@@ -28,7 +28,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-32 bg-[#f9f9f7] border-t border-[#e8e8e4]">
+    <section id="process" className="py-56 bg-[#f9f9f7] border-t border-[#e8e8e4]">
       <Container headingPadding={true}>
 
         <motion.div

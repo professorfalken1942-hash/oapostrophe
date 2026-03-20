@@ -30,10 +30,10 @@ export default function Contact() {
     }
   };
 
-  const inputClass = "w-full h-12 bg-transparent border-b border-[#e8e8e4] px-0 text-sm text-[#111111] placeholder-[#bbb] focus:outline-none focus:border-[#0070ad] transition-colors font-light";
+  const inputClass = "w-full h-12 bg-transparent border-b border-[#e8e8e4] px-0 py-3 text-sm text-[#111111] placeholder-[#bbb] focus:outline-none focus:border-[#0070ad] transition-colors font-light";
 
   return (
-    <section id="contact" className="py-32 bg-[#f9f9f7] border-t border-[#e8e8e4]">
+    <section id="contact" className="py-56 bg-[#f9f9f7] border-t border-[#e8e8e4]">
       <Container headingPadding={true}>
         <div className="grid md:grid-cols-2 gap-16 items-start">
 

@@ -30,7 +30,7 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-40 bg-white border-t border-[#e8e8e4]">
+    <section id="pricing" className="py-56 bg-white border-t border-[#e8e8e4]">
       <Container headingPadding={true}>
 
         {/* Header */}
@@ -56,7 +56,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="grid md:grid-cols-12 gap-8 py-16 px-6 items-start"
+              className="grid md:grid-cols-12 gap-12 py-16 px-6 items-start"
             >
               {/* Number */}
               <div className="md:col-span-1">

@@ -5,7 +5,7 @@ import Container from "./Container";
 
 export default function About() {
   return (
-    <section id="about" className="py-32 bg-white border-t border-[#e8e8e4]">
+    <section id="about" className="py-56 bg-white border-t border-[#e8e8e4]">
       <Container headingPadding={true}>
         <div className="grid md:grid-cols-2 gap-16 items-start">
 

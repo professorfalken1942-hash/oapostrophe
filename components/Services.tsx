@@ -29,7 +29,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-40 bg-white border-t border-[#e8e8e4]">
+    <section id="services" className="py-56 bg-white border-t border-[#e8e8e4]">
       <Container headingPadding={true}>
 
         {/* Header */}
@@ -72,7 +72,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-white flex flex-col gap-10 p-12"
+              className="bg-white flex flex-col gap-12 p-12"
             >
               {/* Number */}
               <span className="label-text text-[#0070ad]">{service.number}</span>
