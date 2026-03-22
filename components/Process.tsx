@@ -28,7 +28,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-56 bg-[#f9f9f7] border-t border-[#e8e8e4]">
+    <section id="process" className="py-56" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--border)" }}>
       <Container headingPadding={true}>
 
         <motion.div
@@ -38,12 +38,12 @@ export default function Process() {
           transition={{ duration: 0.7 }}
           className="mb-24"
         >
-          <h2 className="serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] text-[#111111]">
+          <h2 className="serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05]" style={{ color: "var(--text)" }}>
             How it works
           </h2>
         </motion.div>
 
-        <div className="flex flex-col divide-y divide-[#e8e8e4] px-6 md:px-6">
+        <div className="flex flex-col px-6 md:px-6" style={{ borderColor: "var(--border)" }}>
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
@@ -52,10 +52,11 @@ export default function Process() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
               className="grid md:grid-cols-4 gap-8 py-10 items-start"
+              style={{ borderBottom: "1px solid var(--border)" }}
             >
-              <span className="label-text text-[#0070ad]">{step.number}</span>
-              <h3 className="serif text-2xl text-[#111111]">{step.title}</h3>
-              <p className="text-base text-[#444440] leading-relaxed md:col-span-2">{step.description}</p>
+              <span className="label-text" style={{ color: "var(--accent)" }}>{step.number}</span>
+              <h3 className="serif text-2xl" style={{ color: "var(--text)" }}>{step.title}</h3>
+              <p className="text-base leading-relaxed md:col-span-2" style={{ color: "var(--text-secondary)" }}>{step.description}</p>
             </motion.div>
           ))}
         </div>

@@ -5,7 +5,7 @@ import Container from "./Container";
 
 export default function About() {
   return (
-    <section id="about" className="py-56 bg-white border-t border-[#e8e8e4]">
+    <section id="about" className="py-56" style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
       <Container headingPadding={true}>
         <div className="grid md:grid-cols-2 gap-16 items-start">
 
@@ -16,7 +16,7 @@ export default function About() {
             transition={{ duration: 0.7 }}
             className="px-6 md:px-6"
           >
-            <h2 className="serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] text-[#111111]">
+            <h2 className="serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05]" style={{ color: "var(--text)" }}>
               One person.<br />
               <em>Full capability.</em>
             </h2>
@@ -27,25 +27,27 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="body-copy flex flex-col gap-6 text-[#444440]"
+            className="body-copy flex flex-col gap-6"
+            style={{ color: "var(--text-secondary)" }}
           >
             <p>
-              oapostrophe is a solo studio — which means you get a senior engineer who&apos;s 
-              personally invested in your project, not a rotating cast of junior developers 
+              oapostrophe is a solo studio — which means you get a senior engineer who&apos;s
+              personally invested in your project, not a rotating cast of junior developers
               managed by someone who never looks at the code.
             </p>
             <p>
-              AI-assisted workflows let us move at a pace that used to require a full team. 
-              The result: agency-quality output, boutique-level attention, at a price that 
+              AI-assisted workflows let us move at a pace that used to require a full team.
+              The result: agency-quality output, boutique-level attention, at a price that
               makes sense for businesses that aren&apos;t burning VC money.
             </p>
             <p>
-              We work with small businesses, founders, and anyone who needs something built 
+              We work with small businesses, founders, and anyone who needs something built
               right and built fast — without the overhead.
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 mt-2 label-text text-[#0070ad] hover:gap-4 transition-all"
+              className="inline-flex items-center gap-2 mt-2 label-text hover:gap-4 transition-all"
+              style={{ color: "var(--accent)" }}
             >
               Let&apos;s talk <span>→</span>
             </a>

@@ -1,7 +1,6 @@
 "use client";
 
 import Container from "./Container";
-import Link from "next/link";
 import Image from "next/image";
 
 interface CaseStudy {
@@ -69,10 +68,10 @@ const caseStudies: CaseStudyGallery[] = [
 
 export default function CaseStudies() {
   return (
-    <section id="case-studies" className="py-56 bg-[#f9f9f7] border-t border-[#e8e8e4]">
+    <section id="case-studies" className="py-56" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--border)" }}>
       <Container>
         <div className="mb-32">
-          <h2 className="serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] text-[#111111]">
+          <h2 className="serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05]" style={{ color: "var(--text)" }}>
             Work we&apos;re proud of.
           </h2>
         </div>
@@ -81,51 +80,52 @@ export default function CaseStudies() {
           {caseStudies.map((study) => (
             <div
               key={study.slug}
-              className="grid md:grid-cols-2 gap-16 items-start bg-white rounded border border-[#e8e8e4] overflow-hidden"
+              className="grid md:grid-cols-2 gap-16 items-start overflow-hidden"
+              style={{ background: "var(--bg)", border: "1px solid var(--border)" }}
             >
               {/* Content */}
               <div className="p-12 md:p-16 flex flex-col justify-between">
                 <div>
                   <div className="mb-6">
-                    <p className="label-text text-[#0070ad] font-semibold uppercase mb-2">
+                    <p className="label-text font-semibold uppercase mb-2" style={{ color: "var(--accent)" }}>
                       {study.industry}
                     </p>
-                    <h3 className="serif text-2xl text-[#111111] mb-1">
+                    <h3 className="serif text-2xl mb-1" style={{ color: "var(--text)" }}>
                       {study.title}
                     </h3>
-                    <p className="text-sm text-[#6b6b6b]">{study.client}</p>
+                    <p className="text-sm" style={{ color: "var(--text-muted)" }}>{study.client}</p>
                   </div>
 
                   <div className="space-y-6 mb-8">
                     <div>
-                      <p className="label-text text-[#0070ad] font-semibold uppercase mb-2">
+                      <p className="label-text font-semibold uppercase mb-2" style={{ color: "var(--accent)" }}>
                         Challenge
                       </p>
-                      <p className="text-base text-[#6b6b6b] leading-relaxed">
+                      <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
                         {study.challenge}
                       </p>
                     </div>
 
                     <div>
-                      <p className="label-text text-[#0070ad] font-semibold uppercase mb-2">
+                      <p className="label-text font-semibold uppercase mb-2" style={{ color: "var(--accent)" }}>
                         Solution
                       </p>
-                      <p className="text-base text-[#6b6b6b] leading-relaxed">
+                      <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
                         {study.solution}
                       </p>
                     </div>
 
                     <div>
-                      <p className="label-text text-[#0070ad] font-semibold uppercase mb-2">
+                      <p className="label-text font-semibold uppercase mb-2" style={{ color: "var(--accent)" }}>
                         Results
                       </p>
                       <ul className="space-y-2">
                         {study.results.map((result, i) => (
                           <li key={i} className="flex items-start gap-3">
-                            <span className="text-[#0070ad] font-bold mt-0.5">
-                              ✓
+                            <span className="shrink-0 mt-0.5" style={{ color: "var(--text-faint)" }}>
+                              ·
                             </span>
-                            <span className="text-sm text-[#6b6b6b]">
+                            <span className="text-sm" style={{ color: "var(--text-muted)" }}>
                               {result}
                             </span>
                           </li>
@@ -140,7 +140,8 @@ export default function CaseStudies() {
                     href={study.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 py-3 px-8 bg-[#0070ad] text-white font-semibold rounded hover:bg-[#005580] transition-colors w-fit"
+                    className="inline-flex items-center gap-2 h-12 min-w-[48px] py-3 px-8 font-semibold transition-colors w-fit"
+                    style={{ background: "var(--accent)", color: "var(--bg)" }}
                   >
                     View site →
                   </a>
@@ -148,11 +149,11 @@ export default function CaseStudies() {
               </div>
 
               {/* Gallery */}
-              <div className="bg-[#f9f9f7] p-12 md:p-16 flex flex-col gap-8">
+              <div className="p-12 md:p-16 flex flex-col gap-8" style={{ background: "var(--bg-alt)" }}>
                 {study.gallery && study.gallery.length > 0 ? (
                   <>
                     {/* Featured image */}
-                    <div className="relative w-full h-64 bg-white rounded overflow-hidden">
+                    <div className="relative w-full h-64 overflow-hidden" style={{ background: "var(--bg)" }}>
                       <Image
                         src={study.gallery[0].src}
                         alt={study.gallery[0].alt}
@@ -166,7 +167,8 @@ export default function CaseStudies() {
                       {study.gallery.slice(1).map((img, idx) => (
                         <div
                           key={idx}
-                          className="relative h-24 bg-white rounded overflow-hidden hover:shadow-md transition-shadow"
+                          className="relative h-24 overflow-hidden hover:shadow-md transition-shadow"
+                          style={{ background: "var(--bg)" }}
                         >
                           <Image
                             src={img.src}
@@ -175,7 +177,7 @@ export default function CaseStudies() {
                             className="object-cover"
                           />
                           {img.caption && (
-                            <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity" style={{ background: "var(--overlay)" }}>
                               <p className="text-white text-xs font-semibold">
                                 {img.caption}
                               </p>
@@ -191,12 +193,12 @@ export default function CaseStudies() {
                     alt={study.imageAlt || study.title}
                     width={500}
                     height={400}
-                    className="w-full rounded object-cover"
+                    className="w-full object-cover"
                   />
                 ) : (
                   <div className="text-center py-16">
-                    <p className="serif text-5xl italic text-[#0070ad] mb-4">P</p>
-                    <p className="text-sm text-[#6b6b6b] max-w-xs mx-auto">
+                    <p className="serif text-5xl italic mb-4" style={{ color: "var(--accent)" }}>P</p>
+                    <p className="text-sm max-w-xs mx-auto" style={{ color: "var(--text-muted)" }}>
                       Clean, Scandinavian portfolio for a wedding makeup artist. Integrated booking, mobile-first design.
                     </p>
                   </div>
@@ -208,12 +210,13 @@ export default function CaseStudies() {
 
         {/* CTA */}
         <div className="mt-24 text-center">
-          <p className="body-copy text-[#6b6b6b] mb-8 max-w-2xl mx-auto">
+          <p className="body-copy mb-8 max-w-2xl mx-auto" style={{ color: "var(--text-muted)" }}>
             Have a project that needs the same treatment? Let&apos;s talk about what we can build for you.
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 h-12 px-12 bg-[#0070ad] text-white font-semibold rounded hover:bg-[#005580] transition-colors"
+            className="inline-flex items-center gap-2 h-12 min-w-[48px] px-12 font-semibold transition-colors"
+            style={{ background: "var(--accent)", color: "var(--bg)" }}
           >
             Start a project
           </a>

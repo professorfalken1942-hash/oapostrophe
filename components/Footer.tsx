@@ -4,16 +4,17 @@ import Container from "./Container";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#e8e8e4] bg-white">
+    <footer style={{ borderTop: "1px solid var(--border)", background: "var(--bg)" }}>
       <Container>
         <div className="h-16 flex items-center justify-between">
-        <span className="serif italic text-lg text-[#111111]">o&apos;</span>
-        <p className="label-text text-[#bbb]">
+        <span className="serif italic text-lg" style={{ color: "var(--text)" }}>o&apos;</span>
+        <p className="label-text" style={{ color: "var(--text-placeholder)" }}>
           © {new Date().getFullYear()} oapostrophe
         </p>
         <a
           href="mailto:hello@oapostrophe.com"
-          className="label-text text-[#444440] hover:text-[#0070ad] transition-colors"
+          className="label-text transition-colors"
+          style={{ color: "var(--text-secondary)" }}
         >
           hello@oapostrophe.com
         </a>

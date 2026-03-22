@@ -5,19 +5,55 @@ section {
 }
 
 :root {
-  --blue: #0070ad;
-  --black: #111111;
-  --white: #ffffff;
-  --off-white: #f9f9f7;
-  --gray: #444440;
-  --light-gray: #e8e8e4;
+  /* Color Palette — Light */
+  --accent: #0070ad;
+  --accent-hover: #005580;
+  --accent-light: #0070ad;
+  --bg: #ffffff;
+  --bg-alt: #f9f9f7;
+  --text: #111111;
+  --text-secondary: #444440;
+  --text-muted: #6b6b6b;
+  --text-faint: #888884;
+  --text-placeholder: #bbbbbb;
+  --border: #e8e8e4;
+  --tag-bg: #f5f5f3;
+  --nav-bg: rgba(255, 255, 255, 0.96);
+  --selection-bg: #0047FF;
+  --selection-text: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.15);
+  --btn-shadow: rgba(0, 0, 0, 0.1);
+  --overlay: rgba(0, 0, 0, 0.5);
+
+  /* Typography */
   --serif: var(--font-serif);
   --sans: var(--font-inter);
-  
+
   /* Material Design Motion */
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
   --ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+}
+
+[data-theme="dark"] {
+  --accent: #3da0d4;
+  --accent-hover: #5bb8e8;
+  --accent-light: #3da0d4;
+  --bg: #0a0a0a;
+  --bg-alt: #141414;
+  --text: #e8e8e4;
+  --text-secondary: #a0a09c;
+  --text-muted: #888884;
+  --text-faint: #666662;
+  --text-placeholder: #555;
+  --border: #2a2a28;
+  --tag-bg: #1e1e1c;
+  --nav-bg: rgba(10, 10, 10, 0.96);
+  --selection-bg: #3da0d4;
+  --selection-text: #0a0a0a;
+  --card-shadow: rgba(0, 0, 0, 0.4);
+  --btn-shadow: rgba(0, 0, 0, 0.3);
+  --overlay: rgba(0, 0, 0, 0.7);
 }
 
 * {
@@ -31,17 +67,18 @@ html {
 }
 
 body {
-  background: var(--white);
-  color: var(--black);
+  background: var(--bg);
+  color: var(--text);
   font-family: var(--font-inter), 'Helvetica Neue', sans-serif;
   font-weight: 400;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
+  transition: background 300ms var(--ease-standard), color 300ms var(--ease-standard);
 }
 
 ::selection {
-  background: #0047FF;
-  color: #ffffff;
+  background: var(--selection-bg);
+  color: var(--selection-text);
 }
 
 .serif {
@@ -91,7 +128,7 @@ button, [role="button"], a[href^="#"] {
 
 button:hover, [role="button"]:hover {
   transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px var(--btn-shadow);
 }
 
 button:active, [role="button"]:active {
@@ -100,7 +137,7 @@ button:active, [role="button"]:active {
 }
 
 button:focus-visible, [role="button"]:focus-visible {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -132,7 +169,7 @@ a:not([href^="#"]):not([href^="/"]):not([class*="btn"]):not([class*="button"]):h
 
 .card:hover, [class*="card"]:hover, [class*="Card"]:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 24px var(--card-shadow);
 }
 
 /* Fade In */
