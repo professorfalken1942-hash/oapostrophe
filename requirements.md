@@ -82,6 +82,7 @@
 - [ ] TypeScript strict mode
 - [ ] No console errors or warnings
 - [ ] Semantic HTML
+- [x] Semantic BEM classes and IDs on all elements (see reference below)
 - [ ] Accessible color contrast (WCAG AA minimum)
 - [ ] `'use client'` directives where needed
 
@@ -167,5 +168,193 @@ Before going live:
 
 ---
 
-**Last updated:** March 21, 2026
+## Semantic Class & ID Reference
+
+All elements use BEM naming: `.block__element--modifier`
+
+### Landmarks (IDs)
+
+| ID | Element | Component |
+|----|---------|-----------|
+| `#site-nav` | `<nav>` | Nav |
+| `#hero` | `<section>` | Hero |
+| `#services` | `<section>` | Services |
+| `#process` | `<section>` | Process |
+| `#pricing` | `<section>` | Pricing |
+| `#about` | `<section>` | About |
+| `#case-studies` | `<section>` | CaseStudies |
+| `#contact` | `<section>` | Contact |
+| `#site-footer` | `<footer>` | Footer |
+| `#contact-form` | `<form>` | Contact |
+| `#contact-name` | `<input>` | Contact |
+| `#contact-email` | `<input>` | Contact |
+| `#contact-project-type` | `<select>` | Contact |
+| `#contact-budget` | `<select>` | Contact |
+| `#contact-message` | `<textarea>` | Contact |
+| `#case-study-{slug}` | `<article>` | CaseStudies |
+
+### Navigation
+
+| Class | Description |
+|-------|-------------|
+| `.site-nav` | Top-level nav container |
+| `.site-nav__bar` | Inner bar (logo + links) |
+| `.site-nav__logo` | Logo link |
+| `.site-nav__links` | Desktop link group |
+| `.site-nav__link` | Individual nav link |
+| `.site-nav__cta` | Desktop CTA button |
+| `.site-nav__mobile-controls` | Mobile hamburger + theme toggle wrapper |
+| `.site-nav__hamburger` | Hamburger button |
+| `.site-nav__hamburger-icon` | Hamburger icon wrapper |
+| `.site-nav__hamburger-line` | Individual hamburger bar |
+| `.site-nav__mobile-menu` | Mobile dropdown menu |
+| `.site-nav__mobile-links` | Mobile link list |
+| `.site-nav__mobile-link` | Individual mobile link |
+| `.site-nav__mobile-cta` | Mobile CTA button |
+
+### Hero
+
+| Class | Description |
+|-------|-------------|
+| `.hero` | Section container |
+| `.hero__content` | Content wrapper |
+| `.hero__label` | Studio label text |
+| `.hero__heading` | Main heading |
+| `.hero__heading-accent` | Accent-colored heading text |
+| `.hero__footer` | Bottom area (description + actions) |
+| `.hero__description` | Body copy |
+| `.hero__actions` | CTA button group |
+
+### Services
+
+| Class | Description |
+|-------|-------------|
+| `.services` | Section container |
+| `.services__header` | Header grid (heading + intro) |
+| `.services__heading` | Section heading |
+| `.services__intro` | Intro text wrapper |
+| `.services__intro-copy` | Intro body copy |
+| `.services__grid` | Service cards grid |
+| `.service-card` | Individual service card |
+| `.service-card__number` | Card number (01, 02, 03) |
+| `.service-card__title` | Card title |
+| `.service-card__description` | Card description |
+| `.service-card__tags` | Tags wrapper |
+| `.tag` | Individual tag |
+
+### Process
+
+| Class | Description |
+|-------|-------------|
+| `.process` | Section container |
+| `.process__header` | Header wrapper |
+| `.process__heading` | Section heading |
+| `.process__steps` | Steps list |
+| `.process-step` | Individual step row |
+| `.process-step__number` | Step number |
+| `.process-step__title` | Step title |
+| `.process-step__description` | Step description |
+
+### About
+
+| Class | Description |
+|-------|-------------|
+| `.about` | Section container |
+| `.about__layout` | Grid layout |
+| `.about__header` | Header wrapper |
+| `.about__heading` | Section heading |
+| `.about__body` | Body copy wrapper |
+
+### Pricing
+
+| Class | Description |
+|-------|-------------|
+| `.pricing` | Section container |
+| `.pricing__header` | Header wrapper |
+| `.pricing__heading` | Section heading |
+| `.pricing__plans` | Plans list |
+| `.pricing__note` | Footer note |
+| `.pricing-plan` | Individual plan row |
+| `.pricing-plan--featured` | Highlighted/featured plan |
+| `.pricing-plan__number` | Plan number |
+| `.pricing-plan__info` | Plan name + description |
+| `.pricing-plan__name` | Plan name |
+| `.pricing-plan__description` | Plan description |
+| `.pricing-plan__features` | Features list |
+| `.pricing-plan__feature` | Individual feature |
+| `.pricing-plan__action` | Price + CTA wrapper |
+| `.pricing-plan__price` | Price display |
+
+### Case Studies
+
+| Class | Description |
+|-------|-------------|
+| `.case-studies` | Section container |
+| `.case-studies__header` | Header wrapper |
+| `.case-studies__heading` | Section heading |
+| `.case-studies__list` | List of case studies |
+| `.case-studies__cta` | Bottom CTA area |
+| `.case-study` | Individual case study article |
+| `.case-study__content` | Text content column |
+| `.case-study__meta` | Industry + title + client |
+| `.case-study__industry` | Industry label |
+| `.case-study__title` | Case study title |
+| `.case-study__client` | Client name |
+| `.case-study__details` | Challenge + solution + results |
+| `.case-study__challenge` | Challenge section |
+| `.case-study__solution` | Solution section |
+| `.case-study__results` | Results section |
+| `.case-study__results-list` | Results list |
+| `.case-study__result` | Individual result item |
+| `.case-study__gallery` | Gallery column |
+| `.case-study__gallery-featured` | Featured image |
+| `.case-study__gallery-grid` | Thumbnail grid |
+| `.case-study__gallery-thumb` | Individual thumbnail |
+| `.case-study__gallery-overlay` | Caption overlay |
+| `.case-study__placeholder` | Placeholder (no images) |
+
+### Contact
+
+| Class | Description |
+|-------|-------------|
+| `.contact` | Section container |
+| `.contact__layout` | Grid layout |
+| `.contact__header` | Header wrapper |
+| `.contact__heading` | Section heading |
+| `.contact__description` | Body copy |
+| `.contact-form` | Form element |
+| `.contact-form__row` | Input row (name + email) |
+| `.contact-form__input` | Text/email input |
+| `.contact-form__select` | Select dropdown |
+| `.contact-form__textarea` | Message textarea |
+| `.contact-form__submit` | Submit button |
+| `.contact-form__success` | Success message |
+| `.contact-form__error` | Error message |
+
+### Footer
+
+| Class | Description |
+|-------|-------------|
+| `.site-footer` | Footer container |
+| `.site-footer__bar` | Inner bar |
+| `.site-footer__logo` | Logo |
+| `.site-footer__copyright` | Copyright text |
+| `.site-footer__email` | Email link |
+
+### Shared / Reusable
+
+| Class | Description |
+|-------|-------------|
+| `.cta-button` | Any call-to-action button |
+| `.cta-button--primary` | Filled accent button |
+| `.cta-button--outline` | Bordered outline button |
+| `.cta-link` | Inline text CTA with arrow |
+| `.tag` | Technology/category tag |
+| `.label-text` | Uppercase label typography |
+| `.body-copy` | Body paragraph typography |
+| `.serif` | Serif font family |
+
+---
+
+**Last updated:** March 22, 2026
 **Status:** Active Development
