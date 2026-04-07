@@ -63,7 +63,7 @@ export default function Pricing() {
                 <p className="pricing-plan__description body-copy text-sm mt-2 max-w-none" style={{ color: "var(--text-faint)" }}>{plan.description}</p>
               </div>
 
-              <ul className="pricing-plan__features md:col-span-5 flex flex-col gap-3">
+              <ul className="pricing-plan__features md:col-span-5 flex flex-col gap-3" style={{ marginTop: "2rem" }}>
                 {plan.features.map((f, j) => (
                   <li key={j} className="pricing-plan__feature flex items-start gap-3">
                     <span className="shrink-0 mt-0.5" style={{ color: "var(--text-faint)" }}>·</span>
