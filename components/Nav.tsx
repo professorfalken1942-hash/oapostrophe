@@ -29,8 +29,8 @@ export default function Nav() {
         className="site-nav__bar max-w-8xl mx-auto px-8 md:px-16 h-16 flex items-center justify-between"
         style={{ borderBottom: "1px solid var(--border)", marginRight: 32 }}
       >
-        <a href="#" className="site-nav__logo serif text-xl italic" style={{ color: "var(--text)" }}>
-          o&apos;
+        <a href="#" className="site-nav__logo flex items-center h-12">
+          <img src="/logo.jpg" alt="O'Apostrophe" style={{ height: "100%", width: "auto", objectFit: "contain" }} />
         </a>
 
         {/* Desktop nav */}
