@@ -15,7 +15,7 @@ const plans = [
   {
     number: "02",
     name: "Professional",
-    price: "$200",
+    price: "$1200",
     period: "/month",
     description: "Full maintenance with active development",
     features: ["Everything in Starter", "10 hours monthly dev & design", "Feature requests & enhancements", "Slack support (24hr response)"],
